@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Crea tu propia tarjeta de visita</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Merriweather:wght@900&family=Montserrat:wght@400;700&family=Open+Sans:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      href="./assets/images/logo-devilappers.svg"
+      sizes="32x32"
+    />
+    <link rel="stylesheet" href="./assets/css/main.css" />
+    <script
+      src="https://kit.fontawesome.com/3cd653d2b1.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <header class="header" role="banner">
+      <div>
+        <a href="./index.html">
+          <img
+            class="header__image"
+            src="./assets/images/logo-awesome-profile-cards.svg"
+            alt="Logo crea tu propia tarjeta de visita"
+            title="Vuelve a la página de bienvenida"
+          />
+        </a>
+      </div>
+    </header>
+
+    <main class="mainProfileCards" role="main">
+      <section class="mainCard">
+        <div class="resetImage">
+          <button class="mainCard__button js-resetBtn" type="reset" value="Reset">
+            <i
+              class="far fa-trash-alt mainCard__button--trashBin"
+              aria-hidden="true"
+            ></i>
+            Reset
+          </button>
+          <article class="mainCard__wrapper">
+            <h1 class="mainCard__wrapper--name js-nameCard js-border1">
+              Nombre completo
+            </h1>
+            <h2 class="mainCard__wrapper--position js-positionCard js-border2">
+              Profesión
+            </h2>
+            <div class="profile">
+              <!-- <div class="profile__image js__profile-image">
+                <img class="js-cardImg" src="" alt="" />
+              </div> -->
+              <div
+                class="profile__image js__profile-image"
+                style="
+                  background-image: url(https://i.picasion.com/pic90/275001457e7c33cd30cbc32e7de2aabe.gif);
+                "
+              ></div>
+            </div>
+            <nav>
+              <ul class="mainCard__wrapper--list">
+                <li class="socialLink js-circle1">
+                  <a
+                    href=""
+                    target="_blank"
+                    class="socialLink__link js-tlCard js-icon1"
+                    ><i class="fas fa-mobile-alt" aria-hidden="true"></i
+                  ></a>
+                </li>
+                <li class="socialLink js-circle2">
+                  <a
+                    href=""
+                    target="_blank"
+                    class="socialLink__link js-emailCard js-icon2"
+                    ><i class="far fa-envelope" aria-hidden="true"></i
+                  ></a>
+                </li>
+                <li class="socialLink js-circle3">
+                  <a
+                    href=""
+                    target="_blank"
+                    class="socialLink__link js-linkedinCard js-icon3"
+                    ><i class="fab fa-linkedin-in" aria-hidden="true"></i
+                  ></a>
+                </li>
+                <li class="socialLink js-circle4">
+                  <a
+                    href=""
+                    target="_blank"
+                    class="socialLink__link js-gitHubCard js-icon4"
+                  >
+                    <i class="fab fa-github-alt" aria-hidden="true"></i
+                  ></a>
+                </li>
+              </ul>
+            </nav>
+          </article>
+        </div>
+      </section>
+
+      <section class="mainOptions">
+        <div>
+          <nav class="mainMenu navDesign">
+            <div class="mainMenu__iconTitle">
+              <span class="mainMenu__iconTitle--icon"
+                ><i class="far fa-object-ungroup" aria-hidden="true"></i>
+              </span>
+              <h3 class="mainMenu__iconTitle--title">Diseña</h3>
+            </div>
+            <button class="mainMenu__button js-button" id="design">
+              <img src="https://img.icons8.com/ios-glyphs/30/000000/jack-o-lantern.png" />
+            </button>
+          </nav>
+
+          <section class="collapsableDesign hideCollapsable section-design">
+            <h4 class="collapsableDesign__title">Colores</h4>
+            <div class="collapsableDesign__palette">
+              <label for="palette1" class="palette1">
+                <input
+                  class="paletteRadio js-paletteRadio1"
+                  id="palette1"
+                  type="radio"
+                  value="1"
+                  name="palette"
+                />
+                <div class="palette1__color1"></div>
+                <div class="palette1__color2"></div>
+                <div class="palette1__color3"></div>
+              </label>
+              <label for="palette2" class="palette2">
+                <input
+                  class="paletteRadio js-paletteRadio2"
+                  id="palette2"
+                  type="radio"
+                  value="2"
+                  name="palette"
+                />
+                <div class="palette2__color1"></div>
+                <div class="palette2__color2"></div>
+                <div class="palette2__color3"></div>
+              </label>
+              <label for="palette3" class="palette3">
+                <input
+                  class="paletteRadio js-paletteRadio3"
+                  id="palette3"
+                  type="radio"
+                  value="3"
+                  name="palette"
+                />
+                <div class="palette3__color1"></div>
+                <div class="palette3__color2"></div>
+                <div class="palette3__color3"></div>
+              </label>
+              <label for="halloween" class="palette4">
+                <input
+                  class="paletteRadio js-paletteRadio4"
+                  id="halloween"
+                  type="radio"
+                  value="4"
+                  name="palette"
+                />
+                <div class="palette4__color1"></div>
+                <div class="palette4__color2"></div>
+                <div class="palette4__color3"></div>
+              </label>
+            </div>
+          </section>
+        </div>
+
+        <div>
+          <nav class="mainMenu navForm">
+            <div class="mainMenu__iconTitle">
+              <span class="mainMenu__iconTitle--icon"
+                ><i class="far fa-keyboard" aria-hidden="true"></i>
+              </span>
+              <h3 class="mainMenu__iconTitle--title">Rellena</h3>
+            </div>
+            <button class="mainMenu__button js-button" id="form">
+              <img src="https://img.icons8.com/ios-glyphs/30/000000/jack-o-lantern.png" />
+            </button>
+          </nav>
+
+          <!------- Revisar cómo enlazar el formulario con JavaScript ---------->
+          <section class="hideCollapsable section-form">
+            <!--A esta clase hay que QUITARLE hideCollapsable con JS para desplegarla-->
+            <form class="form" action="" method="POST">
+              <label class="form__label" for="fullName">Nombre completo</label>
+              <input
+                class="form__input js-field"
+                id="name"
+                type="text"
+                name="name"
+                placeholder="Ej.: Maléfica"
+                required
+              />
+              <label class="form__label" for="position">Puesto</label>
+              <input
+                class="form__input js-field"
+                id="job"
+                type="text"
+                name="job"
+                placeholder="Ej.: Bruja malvada"
+                required
+              />
+              <label class="form__label labelImage" for="img">Imagen de perfil</label>
+              <div class="form__wrapperImage">
+                <div class="action">
+                  <button class="action__upload-btn js__profile-trigger" type="button">
+                    Añadir imagen
+                  </button>
+                  <input
+                    type="file"
+                    name=""
+                    id="photo"
+                    class="action__hiddenField js__profile-upload-btn"
+                    required
+                  />
+                </div>
+                <div class="profile">
+                  <div class="profile__preview js__profile-preview"></div>
+                </div>
+              </div>
+              <label class="form__label" for="emailAddress">E-mail</label>
+              <input
+                class="form__input js-field"
+                id="email"
+                type="email"
+                name="email"
+                placeholder="Ej.: malefica@gmail.com"
+                required
+              />
+              <label class="form__label" for="telephone">Teléfono</label>
+              <input
+                class="form__input js-field"
+                id="phone"
+                type="tel"
+                name="phone"
+                placeholder="Ej.: 666-66-66-66"
+                required
+              />
+
+              <label class="form__label" for="linkedin">LinkedIn</label>
+              <input
+                class="form__input js-field"
+                id="linkedin"
+                type="text"
+                name="linkedin"
+                placeholder="Ej.: linkedin.com/in/malefica"
+              />
+              <label class="form__label" for="github">GitHub</label>
+              <input
+                class="form__input js-field"
+                id="github"
+                type="text"
+                name="github"
+                placeholder="Ej.: @malefica"
+              />
+            </form>
+          </section>
+        </div>
+
+        <div>
+          <nav class="mainMenu navShare">
+            <div class="mainMenu__iconTitle">
+              <span class="mainMenu__iconTitle--icon"
+                ><i class="fas fa-share-alt" aria-hidden="true"></i>
+              </span>
+              <h3 class="mainMenu__iconTitle--title">Comparte</h3>
+            </div>
+            <button class="mainMenu__button js-button" id="share">
+              <img src="https://img.icons8.com/ios-glyphs/30/000000/jack-o-lantern.png" />
+            </button>
+          </nav>
+
+          <section class="collapsableShare hideCollapsable section-share">
+            <button class="collapsableShare__btn">
+              <i class="far fa-address-card" aria-hidden="true"></i>
+              Crear tarjeta
+            </button>
+            <div class="collapsableShare__createLink hideCollapsable">
+              <p class="collapsableShare__createLink--title">
+                La tarjeta ha sido creada:
+              </p>
+              <span class="collapsableShare__createLink--twitterLink"></span>
+              <a
+                class="collapsableShare__createLink--twitterButton"
+                target="_blank"
+                href="https://twitter.com/Adalab_Digital"
+              >
+                <i class="fab fa-twitter" aria-hidden="true"></i>
+                Compartir en Twitter
+              </a>
+            </div>
+          </section>
+        </div>
+
+      </section>
+
+    </main>
+
+    <footer class="footer" role="contentinfo">
+      <small class="footer__small"> &copy; devilAPPers 2020 </small>
+      <a href="./profileCards.html" title="Ir a crear tu tarjeta de visita">
+        <img
+          class="footer__logo"
+          src="./assets/images/logo-devilappers.svg"
+          alt="Logo del grupo"
+          title="Logo del grupo"
+        />
+      </a>
+    </footer>
+
+    <script src="./assets/js/main.js"></script>
+  </body>
+</html>

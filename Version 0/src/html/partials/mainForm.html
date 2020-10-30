@@ -1,0 +1,87 @@
+<div>
+  <include
+    src="./menu.html"
+    icon="far fa-keyboard"
+    title="Rellena"
+    navClass="navForm"
+    id="form"
+  >
+  </include>
+  <!------- Revisar cómo enlazar el formulario con JavaScript ---------->
+  <section class="hideCollapsable section-form">
+    <!--A esta clase hay que QUITARLE hideCollapsable con JS para desplegarla-->
+    <form class="form" action="" method="POST">
+      <label class="form__label" for="fullName">Nombre completo</label>
+      <input
+        class="form__input js-field"
+        id="name"
+        type="text"
+        name="name"
+        placeholder="Ej.: Maléfica"
+        required
+      />
+      <label class="form__label" for="position">Puesto</label>
+      <input
+        class="form__input js-field"
+        id="job"
+        type="text"
+        name="job"
+        placeholder="Ej.: Bruja malvada"
+        required
+      />
+      <label class="form__label labelImage" for="img">Imagen de perfil</label>
+      <div class="form__wrapperImage">
+        <div class="action">
+          <button class="action__upload-btn js__profile-trigger" type="button">
+            Añadir imagen
+          </button>
+          <input
+            type="file"
+            name=""
+            id="photo"
+            class="action__hiddenField js__profile-upload-btn"
+            required
+          />
+        </div>
+        <div class="profile">
+          <div class="profile__preview js__profile-preview"></div>
+        </div>
+      </div>
+      <label class="form__label" for="emailAddress">E-mail</label>
+      <input
+        class="form__input js-field"
+        id="email"
+        type="email"
+        name="email"
+        placeholder="Ej.: malefica@gmail.com"
+        required
+      />
+      <label class="form__label" for="telephone">Teléfono</label>
+      <input
+        class="form__input js-field"
+        id="phone"
+        type="tel"
+        name="phone"
+        placeholder="Ej.: 666-66-66-66"
+        required
+      />
+
+      <label class="form__label" for="linkedin">LinkedIn</label>
+      <input
+        class="form__input js-field"
+        id="linkedin"
+        type="text"
+        name="linkedin"
+        placeholder="Ej.: linkedin.com/in/malefica"
+      />
+      <label class="form__label" for="github">GitHub</label>
+      <input
+        class="form__input js-field"
+        id="github"
+        type="text"
+        name="github"
+        placeholder="Ej.: @malefica"
+      />
+    </form>
+  </section>
+</div>

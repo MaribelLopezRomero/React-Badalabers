@@ -1,0 +1,112 @@
+.collapsableShare {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-bottom: 1px solid $colorBrand2;
+  animation-name: collapsable;
+  animation-duration: 1s;
+  animation-iteration-count: 1;
+  animation-fill-mode: backwards;
+  @keyframes collapsable {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+  &__btn {
+    width: 199px;
+    height: 50px;
+    padding: auto;
+    margin: 30px 0px;
+    border-radius: 12px;
+    box-shadow: 0 1px 6px 0 rgba(0, 0, 0, 0.32);
+    border: none;
+    background-color: $colorPrimary;
+    color: $colorWhite;
+    font-family: $fontPrimary;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: normal;
+    text-transform: uppercase;
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  &__createLink {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-top: 1px solid $colorBrand2;
+    padding-top: 20px;
+    width: 100%;
+    animation-name: collapsable;
+    animation-duration: 1s;
+    animation-iteration-count: 1;
+    animation-fill-mode: backwards;
+    @keyframes collapsable {
+      0% {
+        opacity: 0;
+      }
+      100% {
+        opacity: 1;
+      }
+    }
+
+    &--title {
+      font-family: $fontPrimary;
+      color: $colorSecondary;
+      font-size: 18px;
+      font-weight: 600;
+      line-height: normal;
+    }
+
+    &--cardLink {
+      font-family: $fontPrimary;
+      font-size: 12px;
+      font-weight: 600;
+      line-height: normal;
+      color: $colorPrimary;
+      margin: 0 -7px 10px -5px;
+    }
+    &--twitterButton {
+      width: 181px;
+      height: 30px;
+      padding: 3px 9px 7px 10.5px;
+      border-radius: 3px;
+      font-family: $fontPrimary;
+      font-size: 14px;
+      text-decoration: none;
+      color: $colorWhite;
+      background-color: $colorBrand7;
+      box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.32);
+      margin: 0 49px 30px 50px;
+    }
+  }
+
+  .fa-address-card {
+    margin-right: 5px;
+  }
+}
+
+.fa-twitter {
+  font-size: 18px;
+  position: relative;
+  top: 3px;
+}
+
+.btnClick {
+  background-color: $colorBrand8;
+}
+
+.collapsableShare__createLink--twitterLink {
+  margin: 5px 0 13px 0;
+  font-family: $fontPrimary;
+  font-weight: 600;
+  font-size: 12px;
+  color: $colorPrimary;
+}

@@ -1,0 +1,110 @@
+.mainCard {
+  background: url("https://thumbs.dreamstime.com/b/elemento-de-halloween-con-la-plantilla-de-la-frontera-y-del-fondo-78776931.jpg")
+    center center no-repeat;
+  padding: 38px 35px 40px 45px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  @media all and (min-width: 768px) {
+    width: 50%;
+    border-radius: 6px;
+  }
+  @media all and (min-width: 1200px) {
+    width: 85%;
+    border-radius: 6px;
+  }
+
+  &__button {
+    height: 30px;
+    width: 75px;
+    border: 1px solid $colorWhite;
+    background: transparent;
+    border-radius: 15px;
+    font-size: 12px;
+    line-height: 20px;
+    text-transform: uppercase;
+    color: $colorSecondary;
+    &:hover {
+      color: $colorWhite;
+      background-color: $colorBrand1;
+      cursor: pointer;
+    }
+
+    &--trashBin {
+      padding-right: 3px;
+    }
+  }
+
+  &__wrapper {
+    background-color: $colorWhite;
+    margin-top: 20px;
+    padding-top: 21px;
+    font-family: $fontSecondary;
+    line-height: 20px;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.35);
+    border-radius: 2px;
+
+    &--name {
+      text-transform: capitalize;
+      font-size: 18px;
+      color: $colorPal1Dark;
+      font-weight: 700;
+      padding: 0px 0 4px 20px;
+      border-left: 5px solid $colorPal1Medium;
+    }
+    &--position {
+      color: $colorSecondary;
+      font-size: 16px;
+      padding: 0px 0px 0px 20px;
+      border-left: 5px solid $colorPal1Medium;
+    }
+    // --------- PROFILE (IMAGE) START ----------
+    .profile {
+      margin: 10px auto;
+      display: flex;
+      justify-content: center;
+
+      &__image {
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        border: 1px solid #ccc;
+        width: 240px;
+        height: 200px;
+      }
+    }
+    // --------- PROFILE (IMAGE) END ----------
+
+    &--list {
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-start;
+      align-items: center;
+      list-style-type: none;
+      margin-left: 20px;
+    }
+  }
+}
+
+.socialLink {
+  border: 2px solid $colorPal1Light;
+  border-radius: 50px;
+  font-size: 18px;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin: 0px 5px 12px 5px;
+  &__link {
+    color: $colorPal1Dark;
+    justify-self: center;
+    align-self: center;
+    padding: 4px;
+  }
+}
+
+.resetImage {
+  width: 240px;
+}

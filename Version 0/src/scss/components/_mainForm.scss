@@ -1,0 +1,84 @@
+.form {
+  padding: 28px 0 10px 0;
+  margin-bottom: 10px;
+  display: flex;
+  flex-direction: column;
+  animation-name: collapsable;
+  animation-duration: 1s;
+  animation-iteration-count: 1;
+  animation-fill-mode: backwards;
+  @keyframes collapsable {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+  &__label {
+    font-family: $fontPrimary;
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 1.43;
+    color: $colorPal1Dark;
+    margin-bottom: 7px;
+  }
+  &__input {
+    height: 30px;
+    border: solid 1px $colorPal1Light;
+    margin-bottom: 20px;
+
+    &[placeholder] {
+      font-family: $fontPrimary;
+      font-size: 14px;
+      padding: 3px 0 3px 9px;
+      color: $colorBrand6;
+    }
+  }
+  &__wrapperImage {
+    display: flex;
+    flex-direction: row;
+  }
+}
+
+.labelImage {
+  margin-top: -2px;
+}
+
+.action {
+  &__upload-btn {
+    width: 145px;
+    height: 30px;
+    border-radius: 3px;
+    background: $colorPrimary;
+    box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.32);
+    box-sizing: border-box;
+    color: $colorWhite;
+    font-family: $fontPrimary;
+    font-size: 14px;
+    padding: 3px 22px 3px 22px;
+    border: none;
+    margin-bottom: 20px;
+    &:hover {
+      cursor: pointer;
+    }
+  }
+  &__hiddenField {
+    /* Ocultamos el input de tipo "file" porque no podemos 
+  darle los estilos que queremos */
+    display: none;
+  }
+}
+
+.profile {
+  &__preview {
+    width: 30px;
+    height: 30px;
+    margin-left: 20px;
+    border: solid 1px $colorPal1Light;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+}

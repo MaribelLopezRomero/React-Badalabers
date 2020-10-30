@@ -1,0 +1,29 @@
+.footer {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  border-top: 1px solid $colorBrand2;
+  padding: 18px 61px 20px 61px;
+  &__small {
+    font-family: $fontPrimary;
+    font-size: 14px;
+    line-height: 20px;
+    color: $colorBrand1lLight;
+    margin-bottom: 12px;
+  }
+  &__logo {
+    width: 103px;
+  }
+}
+
+@media all and (min-width: 768px) {
+  .footer {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 40px 10px 41px;
+  }
+  &__small {
+    margin-bottom: 0;
+  }
+}
