@@ -1,0 +1,10 @@
+.header {
+  margin: 31px 0px 30px 40px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+
+  &__image {
+    width: 201px;
+  }
+}
