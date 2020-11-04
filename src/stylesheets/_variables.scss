@@ -1,0 +1,40 @@
+// fonts
+$fontPrimary: "Open Sans", sans-serif;
+$fontSecondary: "Montserrat", sans-serif;
+$fontTerciary: "Merriweather", serif;
+
+// colors welcome landing
+$colorWhite: #ffffff;
+$colorBg: #f5f5f5;
+$colorPrimary: #e17334;
+$colorPrimaryLight: lighten($colorPrimary, 35%);
+$colorSecondary: #54585a;
+$colorBrand1: #6b6b6b;
+$colorBrand1lLight: lighten($colorBrand1, 35%);
+$colorBrand2: #d8d8d8;
+$colorBrand3: #bfcdd0;
+
+// colors background main card
+
+$colorBrand4: #bfcdd0;
+$colorBrand5: #dde9ed;
+$colorBrand6: #c5c5c5;
+$colorBrand7: #00a0f5;
+$colorBrand8: #d5d5d5;
+
+// colors for palette 1
+$colorPal1Dark: #114e4e;
+$colorPal1Medium: #438792;
+$colorPal1Light: #a2deaf;
+// colors for palette 2
+$colorPal2Dark: #420101;
+$colorPal2Medium: #bd1010;
+$colorPal2Light: #e95626;
+// colors for palette 3
+$colorPal3Dark: #3e5b65;
+$colorPal3Medium: #eab052;
+$colorPal3Light: #a0c0cf;
+// colors for palette halloween
+$colorPalHwDark: #18181a;
+$colorPalHwMedium: #eb6123;
+$colorPalHwLight: #5e32ba;
