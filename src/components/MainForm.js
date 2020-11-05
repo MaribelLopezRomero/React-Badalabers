@@ -1,7 +1,7 @@
 import React from 'react';
 import '../stylesheets/_mainForm.scss';
 
-class Mainhtmlform extends React.Component {
+class MainForm extends React.Component {
   render() {
     return (
       <>
@@ -96,4 +96,4 @@ class Mainhtmlform extends React.Component {
   }
 }
 
-export default Mainhtmlform;
+export default MainForm;

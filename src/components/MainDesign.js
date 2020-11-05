@@ -1,5 +1,5 @@
 import React from 'react';
-import '../stylesheets/_mainCard.scss';
+import '../stylesheets/_mainDesign.scss';
 
 class MainDesign extends React.Component {
   render() {

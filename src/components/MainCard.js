@@ -1,8 +1,6 @@
 import React from 'react';
 import '../stylesheets/_mainCard.scss';
 
-
-
 class MainCard extends React.Component {
   render() {
     return (
