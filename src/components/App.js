@@ -11,7 +11,7 @@ class App extends React.Component {
     return (
       <>
         <Header />
-        <Main /> ... main share ... include
+        <Main /> 
         <Footer />
         <Menu />
       </>

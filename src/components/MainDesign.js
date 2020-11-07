@@ -1,19 +1,20 @@
 import React from 'react';
 import '../stylesheets/_mainDesign.scss';
+import Include from './Include';
 
 class MainDesign extends React.Component {
   render(props) {
     return (
-      <>
+
    <div>
-  <include
-    src="./menu.html"
+  <Include
+    src="./menu.js"
     icon="far fa-object-ungroup"
     title="Diseña"
-    navclass="navDesign"
+    // navclass="navDesign"
     id="design"
-  >
-  </include>
+  />
+
   <section className="collapsableDesign hideCollapsable section-design">
     <h4 className="collapsableDesign__title">Colores</h4>
     <div className="collapsableDesign__palette">
@@ -69,7 +70,6 @@ class MainDesign extends React.Component {
   </section>
 </div>
 
-      </>
     );
   }
 }

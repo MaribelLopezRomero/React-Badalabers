@@ -11,7 +11,7 @@ class MainShare extends React.Component {
           src='./menu.js'
           icon='fas fa-share-alt'
           title='Comparte'
-          navclass='navShare'
+          // navclass='navShare'
           id='share'
           />
           <section className='collapsableShare hideCollapsable section-share'>
