@@ -37,7 +37,7 @@ class MainCard extends React.Component {
                 ></div>
               </div>
               <nav>
-                <ul classNameName="mainCard__wrapper--list">
+                <ul className="mainCard__wrapper--list">
                   <li className="socialLink js-circle1">
                     <a
                       href=""

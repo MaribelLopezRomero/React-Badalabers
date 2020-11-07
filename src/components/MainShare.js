@@ -1,18 +1,19 @@
 import React from 'react';
 import '../stylesheets/_mainShare.scss';
+import Include from './Include';
 
 class MainShare extends React.Component {
   render() {
     return (
-      <>
+    
         <div>
-          <include
-            src='./menu.html'
-            icon='fas fa-share-alt'
-            title='Comparte'
-            navclass='navShare'
-            id='share'
-          ></include>
+          <Include 
+          src='./menu.js'
+          icon='fas fa-share-alt'
+          title='Comparte'
+          navclass='navShare'
+          id='share'
+          />
           <section className='collapsableShare hideCollapsable section-share'>
             <button className='collapsableShare__btn'>
               <i className='far fa-address-card' aria-hidden='true'></i>
@@ -34,7 +35,7 @@ class MainShare extends React.Component {
             </div>
           </section>
         </div>
-      </>
+ 
     );
   }
 }

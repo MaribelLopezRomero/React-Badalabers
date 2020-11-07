@@ -2,7 +2,7 @@ import React from 'react';
 import '../stylesheets/_mainDesign.scss';
 
 class MainDesign extends React.Component {
-  render() {
+  render(props) {
     return (
       <>
    <div>

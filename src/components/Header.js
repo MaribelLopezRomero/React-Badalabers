@@ -6,7 +6,7 @@ class Header extends React.Component {
   render() {
     return (
       <>
-        <header class="header" role="banner">
+        <header className="header" role="banner">
           <div>
             <a href="./index.html">
               <img
