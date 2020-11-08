@@ -40,7 +40,7 @@ class MainCard extends React.Component {
                 <ul className="mainCard__wrapper--list">
                   <li className="socialLink js-circle1">
                     <a
-                      href=""
+                      href="/"
                       target="_blank"
                       className="socialLink__link js-tlCard js-icon1"
                     >
@@ -49,7 +49,7 @@ class MainCard extends React.Component {
                   </li>
                   <li className="socialLink js-circle2">
                     <a
-                      href=""
+                      href="/"
                       target="_blank"
                       className="socialLink__link js-emailCard js-icon2"
                     >
@@ -58,7 +58,7 @@ class MainCard extends React.Component {
                   </li>
                   <li className="socialLink js-circle3">
                     <a
-                      href=""
+                      href="/"
                       target="_blank"
                       className="socialLink__link js-linkedinCard js-icon3"
                     >
@@ -67,7 +67,7 @@ class MainCard extends React.Component {
                   </li>
                   <li className="socialLink js-circle4">
                     <a
-                      href=""
+                      href="/"
                       target="_blank"
                       className="socialLink__link js-gitHubCard js-icon4"
                     >

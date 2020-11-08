@@ -7,10 +7,9 @@ class MainDesign extends React.Component {
     return (
       <div>
         <Include
-          src="./menu.js"
           icon="far fa-object-ungroup"
           title="Diseña"
-          // navclass="navDesign"
+          navclass="navDesign"
           id="design"
         />
 

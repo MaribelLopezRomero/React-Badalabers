@@ -8,10 +8,9 @@ class MainShare extends React.Component {
     return (
       <div>
         <Include
-          src="./menu.js"
           icon="fas fa-share-alt"
           title="Comparte"
-          // navclass='navShare'
+          navclass="navShare"
           id="share"
         />
         <section className="collapsableShare hideCollapsable section-share">
@@ -27,6 +26,7 @@ class MainShare extends React.Component {
             <a
               className="collapsableShare__createLink--twitterButton"
               target="_blank"
+              rel="noreferrer"
               href="https://twitter.com/Adalab_Digital"
             >
               <i className="fab fa-twitter" aria-hidden="true"></i>
