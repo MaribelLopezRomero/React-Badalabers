@@ -1,4 +1,5 @@
 import React from 'react';
+import '../stylesheets/_menu.scss';
 
 class Include extends React.Component {
   render() {
@@ -13,7 +14,7 @@ class Include extends React.Component {
             <h3 className='mainMenu__iconTitle--title'>{this.props.title}</h3>
           </div>
           <button className='mainMenu__button js-button' id={this.props.id}>
-            <img src='https://img.icons8.com/ios-glyphs/30/000000/jack-o-lantern.png' />
+            <img src='https://img.icons8.com/ios-glyphs/30/000000/jack-o-lantern.png' alt="pumpkin icon"/>
           </button>
         </nav>
       </div>

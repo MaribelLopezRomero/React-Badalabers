@@ -5,15 +5,13 @@ import Include from './Include';
 class MainDesign extends React.Component {
   render(props) {
     return (
-
    <div>
-  <Include
-    src="./menu.js"
-    icon="far fa-object-ungroup"
-    title="Diseña"
-    // navclass="navDesign"
-    id="design"
-  />
+    <Include
+      icon="far fa-object-ungroup"
+      title="Diseña"
+      navclass="navDesign"
+      id="design"
+    />
 
   <section className="collapsableDesign hideCollapsable section-design">
     <h4 className="collapsableDesign__title">Colores</h4>

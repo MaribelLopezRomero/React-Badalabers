@@ -7,10 +7,9 @@ class MainForm extends React.Component {
     return (
       <div>
         <Include
-          src='./menu.js'
           icon='far fa-keyboard'
           title='Rellena'
-          // navclass="navhtmlform"
+          navclass="navhtmlform"
           id='htmlform'
         />
         <section className='hideCollapsable section-htmlform'>
