@@ -5,15 +5,13 @@ import Main from './Main';
 import Footer from './Footer';
 import Menu from './Menu';
 
-
 class App extends React.Component {
   render() {
     return (
       <>
         <Header />
-        <Main /> 
+        <Main />
         <Footer />
-        <Menu />
       </>
     );
   }
