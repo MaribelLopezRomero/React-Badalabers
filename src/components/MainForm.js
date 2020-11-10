@@ -1,6 +1,6 @@
-import React from 'react';
-import '../stylesheets/_mainForm.scss';
-import Include from './Include';
+import React from "react";
+import "../stylesheets/_mainForm.scss";
+import Include from "./Include";
 
 class MainForm extends React.Component {
   render() {
@@ -9,37 +9,37 @@ class MainForm extends React.Component {
         <Include
           icon="far fa-keyboard"
           title="Rellena"
-          navclass="navhtmlform"
-          id="htmlform"
+          navclass="navform"
+          id="form"
         />
-        <section className="hideCollapsable section-htmlform">
-          <form className="htmlform" action="" method="POST">
-            <label className="htmlform__label" htmlFor="fullName">
+        <section className="hideCollapsable section-form">
+          <form className="form" action="" method="POST">
+            <label className="form__label" htmlFor="fullName">
               Nombre completo
             </label>
             <input
-              className="htmlform__input js-field"
+              className="form__input js-field"
               id="name"
               type="text"
               name="name"
               placeholder="Ej.: Maléfica"
               required
             />
-            <label className="htmlform__label" htmlFor="position">
+            <label className="form__label" htmlFor="position">
               Puesto
             </label>
             <input
-              className="htmlform__input js-field"
+              className="form__input js-field"
               id="job"
               type="text"
               name="job"
               placeholder="Ej.: Bruja malvada"
               required
             />
-            <label className="htmlform__label labelImage" htmlFor="img">
+            <label className="form__label labelImage" htmlFor="img">
               Imagen de perfil
             </label>
-            <div className="htmlform__wrapperImage">
+            <div className="form__wrapperImage">
               <div className="action">
                 <button
                   className="action__upload-btn js__profile-trigger"
@@ -59,22 +59,22 @@ class MainForm extends React.Component {
                 <div className="profile__preview js__profile-preview"></div>
               </div>
             </div>
-            <label className="htmlform__label" htmlFor="emailAddress">
+            <label className="form__label" htmlFor="emailAddress">
               E-mail
             </label>
             <input
-              className="htmlform__input js-field"
+              className="form__input js-field"
               id="email"
               type="email"
               name="email"
               placeholder="Ej.: malefica@gmail.com"
               required
             />
-            <label className="htmlform__label" htmlFor="telephone">
+            <label className="form__label" htmlFor="telephone">
               Teléfono
             </label>
             <input
-              className="htmlform__input js-field"
+              className="form__input js-field"
               id="phone"
               type="tel"
               name="phone"
@@ -82,21 +82,21 @@ class MainForm extends React.Component {
               required
             />
 
-            <label className="htmlform__label" htmlFor="linkedin">
+            <label className="form__label" htmlFor="linkedin">
               LinkedIn
             </label>
             <input
-              className="htmlform__input js-field"
+              className="form__input js-field"
               id="linkedin"
               type="text"
               name="linkedin"
               placeholder="Ej.: linkedin.com/in/malefica"
             />
-            <label className="htmlform__label" htmlfor="github">
+            <label className="form__label" htmlfor="github">
               GitHub
             </label>
             <input
-              className="htmlform__input js-field"
+              className="form__input js-field"
               id="github"
               type="text"
               name="github"

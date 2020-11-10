@@ -7,3 +7,5 @@ function shareBorder() {
 }
 
 menu.addEventListener("click", shareBorder);
+
+// menu.scss
