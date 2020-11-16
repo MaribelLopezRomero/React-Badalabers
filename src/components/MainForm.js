@@ -1,8 +1,35 @@
 import React from "react";
 import "../stylesheets/_mainForm.scss";
 import Include from "./Include";
+import MainCard from "./MainCard";
 
 class MainForm extends React.Component {
+  constructor(props) {
+    super(props);
+    this.handleChange = this.handleChange.bind(this);
+    this.state = {
+      palette: 1,
+      name: "",
+      job: "",
+      phone: "",
+      email: "",
+      linkedin: "",
+      github: "",
+      photo:
+        "url(" +
+        "https://i.picasion.com/pic90/275001457e7c33cd30cbc32e7de2aabe.gif" +
+        ")",
+    };
+  }
+  handleChange(event) {
+    const key = event.target.id;
+    this.setState({
+      [key]: event.target.value,
+    });
+    console.log(event.target.value);
+    console.log(this.state.name);
+    console.log(event.target.id);
+  }
   render() {
     return (
       <div>
@@ -13,7 +40,12 @@ class MainForm extends React.Component {
           id="form"
         />
         <section className="hideCollapsable section-form">
-          <form className="form" action="" method="POST">
+          <form
+            className="form"
+            onChange={this.handleChange}
+            action=""
+            method="POST"
+          >
             <label className="form__label" htmlFor="fullName">
               Nombre completo
             </label>
@@ -21,7 +53,7 @@ class MainForm extends React.Component {
               className="form__input js-field"
               id="name"
               type="text"
-              name="name"
+              name="inputForm"
               placeholder="Ej.: Maléfica"
               required
             />
@@ -32,7 +64,7 @@ class MainForm extends React.Component {
               className="form__input js-field"
               id="job"
               type="text"
-              name="job"
+              name="inputForm"
               placeholder="Ej.: Bruja malvada"
               required
             />
@@ -66,7 +98,7 @@ class MainForm extends React.Component {
               className="form__input js-field"
               id="email"
               type="email"
-              name="email"
+              name="inputForm"
               placeholder="Ej.: malefica@gmail.com"
               required
             />
@@ -77,7 +109,7 @@ class MainForm extends React.Component {
               className="form__input js-field"
               id="phone"
               type="tel"
-              name="phone"
+              name="inputForm"
               placeholder="Ej.: 666-66-66-66"
               required
             />
@@ -89,7 +121,7 @@ class MainForm extends React.Component {
               className="form__input js-field"
               id="linkedin"
               type="text"
-              name="linkedin"
+              name="inputForm"
               placeholder="Ej.: linkedin.com/in/malefica"
             />
             <label className="form__label" htmlfor="github">
@@ -99,7 +131,7 @@ class MainForm extends React.Component {
               className="form__input js-field"
               id="github"
               type="text"
-              name="github"
+              name="inputForm"
               placeholder="Ej.: @malefica"
             />
           </form>
