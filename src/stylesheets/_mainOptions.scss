@@ -1,0 +1,13 @@
+
+@import './variables';
+.mainOptions {
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(to bottom, $colorBg, $colorWhite 9%);
+  padding: 30px 20px;
+  @media all and (min-width: 768px) {
+    background: none;
+    padding: 7px 30px 30px 40px;
+    width: 50%;
+  }
+}

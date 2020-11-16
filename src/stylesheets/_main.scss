@@ -1,0 +1,14 @@
+@import './variables';
+
+.mainProfileCards {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+
+  @media all and (min-width: 768px) {
+    display: flex;
+    flex-direction: row-reverse;
+    background: linear-gradient(to bottom, $colorBg, $colorWhite 9%);
+    padding: 20px 40px 20px 0;
+  }
+}

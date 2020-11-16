@@ -290,3 +290,5 @@ function erasePalettes() {
   }
   changeColors();
 }
+
+// coloroptions.scss
