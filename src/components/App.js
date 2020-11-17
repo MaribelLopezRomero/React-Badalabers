@@ -26,42 +26,18 @@ class App extends React.Component {
         'https://i.picasion.com/pic90/275001457e7c33cd30cbc32e7de2aabe.gif' +
         ')',
     };
-    this.setItemStorage = this.setItemStorage.bind(this);
   }
   handleChange(event) {
     const key = event.target.id;
     this.setState({
-      [key]: event.target.value,
+      [key]: event.target.value
+    }, () => {
+      localStorage.setItem('object', JSON.stringify(this.state))
     });
     console.log(event.target.value);
     console.log(this.state.name);
     console.log(event.target.id);
-    this.setItemStorage();
   }
-
-  setItemStorage = () => {
-    const {
-      palette,
-      name,
-      job,
-      phone,
-      email,
-      linkedin,
-      github,
-      photo,
-    } = this.state;
-    const localStorageObject = {
-      palette: palette,
-      name: name,
-      job: job,
-      phone: phone,
-      email: email,
-      linkedin: linkedin,
-      github: github,
-      photo: photo,
-    };
-    localStorage.setItem('object', JSON.stringify());
-  };
 
   render() {
     return (
