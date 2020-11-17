@@ -2,6 +2,11 @@ import React from 'react';
 import '../stylesheets/_mainCard.scss';
 
 class MainCard extends React.Component {
+  constructor(props) {
+    super(props);
+  }
+  // const cardData= this.props.dataFromParent;
+
   render() {
     return (
       <>
@@ -20,10 +25,10 @@ class MainCard extends React.Component {
             </button>
             <article className="mainCard__wrapper">
               <h1 className="mainCard__wrapper--name js-nameCard js-border1">
-                Nombre completo
+                {this.props.dataFromParent.name || 'Nombre Apellido'}
               </h1>
               <h2 className="mainCard__wrapper--position js-positionCard js-border2">
-                Profesión
+                {this.props.dataFromParent.job || 'Front-end developer'}
               </h2>
               <div className="profile">
                 {/* <!-- <div className="profile__image js__profile-image">
@@ -32,7 +37,10 @@ class MainCard extends React.Component {
                 <div
                   className="profile__image js__profile-image"
                   style={{
-            backgroundImage: "url("+"https://i.picasion.com/pic90/275001457e7c33cd30cbc32e7de2aabe.gif"+")"
+                    backgroundImage:
+                      'url(' +
+                      'https://i.picasion.com/pic90/275001457e7c33cd30cbc32e7de2aabe.gif' +
+                      ')',
                   }}
                 ></div>
               </div>
@@ -40,8 +48,9 @@ class MainCard extends React.Component {
                 <ul className="mainCard__wrapper--list">
                   <li className="socialLink js-circle1">
                     <a
-                      href="/"
+                      href={'tel:' + this.props.dataFromParent.phone}
                       target="_blank"
+                      rel="noreferrer"
                       className="socialLink__link js-tlCard js-icon1"
                     >
                       <i className="fas fa-mobile-alt" aria-hidden="true"></i>
@@ -49,8 +58,9 @@ class MainCard extends React.Component {
                   </li>
                   <li className="socialLink js-circle2">
                     <a
-                      href="/"
+                      href={'mailto:' + this.props.dataFromParent.email}
                       target="_blank"
+                      rel="noreferrer"
                       className="socialLink__link js-emailCard js-icon2"
                     >
                       <i className="far fa-envelope" aria-hidden="true"></i>
@@ -58,8 +68,12 @@ class MainCard extends React.Component {
                   </li>
                   <li className="socialLink js-circle3">
                     <a
-                      href="/"
+                      href={
+                        'https://www.linkedin.com/in/' +
+                        this.props.dataFromParent.linkedin
+                      }
                       target="_blank"
+                      rel="noreferrer"
                       className="socialLink__link js-linkedinCard js-icon3"
                     >
                       <i className="fab fa-linkedin-in" aria-hidden="true"></i>
@@ -67,8 +81,12 @@ class MainCard extends React.Component {
                   </li>
                   <li className="socialLink js-circle4">
                     <a
-                      href="/"
+                      href={
+                        'https://www.github.com/' +
+                        this.props.dataFromParent.github
+                      }
                       target="_blank"
+                      rel="noreferrer"
                       className="socialLink__link js-gitHubCard js-icon4"
                     >
                       <i className="fab fa-github-alt" aria-hidden="true"></i>

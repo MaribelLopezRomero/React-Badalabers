@@ -1,35 +1,12 @@
-import React from "react";
-import "../stylesheets/_mainForm.scss";
-import Include from "./Include";
-import MainCard from "./MainCard";
+import React from 'react';
+import '../stylesheets/_mainForm.scss';
+import Include from './Include';
 
 class MainForm extends React.Component {
   constructor(props) {
     super(props);
-    this.handleChange = this.handleChange.bind(this);
-    this.state = {
-      palette: 1,
-      name: "",
-      job: "",
-      phone: "",
-      email: "",
-      linkedin: "",
-      github: "",
-      photo:
-        "url(" +
-        "https://i.picasion.com/pic90/275001457e7c33cd30cbc32e7de2aabe.gif" +
-        ")",
-    };
   }
-  handleChange(event) {
-    const key = event.target.id;
-    this.setState({
-      [key]: event.target.value,
-    });
-    console.log(event.target.value);
-    console.log(this.state.name);
-    console.log(event.target.id);
-  }
+
   render() {
     return (
       <div>
@@ -42,7 +19,7 @@ class MainForm extends React.Component {
         <section className="hideCollapsable section-form">
           <form
             className="form"
-            onChange={this.handleChange}
+            onChange={this.props.inputChange}
             action=""
             method="POST"
           >
