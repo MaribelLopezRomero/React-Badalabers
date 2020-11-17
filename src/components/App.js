@@ -60,7 +60,7 @@ class App extends React.Component {
       github: github,
       photo: photo,
     };
-    localStorage.setItem('object', JSON.stringify(this.state));
+    localStorage.setItem('object', JSON.stringify());
   };
 
   render() {
