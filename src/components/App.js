@@ -47,7 +47,7 @@ class App extends React.Component {
         email: '',
         linkedin: '',
         github: '',
-        photo:
+        photo: ''
           'url(' +
           'https://i.picasion.com/pic90/275001457e7c33cd30cbc32e7de2aabe.gif' +
           ')',
