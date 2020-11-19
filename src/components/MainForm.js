@@ -1,6 +1,6 @@
-import React from 'react';
-import '../stylesheets/_mainForm.scss';
-import Include from './Include';
+import React from "react";
+import "../stylesheets/_mainForm.scss";
+import Include from "./Include";
 
 class MainForm extends React.Component {
   constructor(props) {
@@ -33,6 +33,7 @@ class MainForm extends React.Component {
               name="inputForm"
               placeholder="Ej.: Maléfica"
               required
+              value={this.props.name}
             />
             <label className="form__label" htmlFor="position">
               Puesto

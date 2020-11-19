@@ -1,13 +1,13 @@
-import '../stylesheets/App.scss';
-import Header from './Header';
-import React from 'react';
-import Footer from './Footer';
-import MainCard from './MainCard';
-import '../stylesheets/_main.scss';
-import '../stylesheets/_mainOptions.scss';
-import MainDesign from './MainDesign';
-import MainForm from './MainForm';
-import MainShare from './MainShare';
+import "../stylesheets/App.scss";
+import Header from "./Header";
+import React from "react";
+import Footer from "./Footer";
+import MainCard from "./MainCard";
+import "../stylesheets/_main.scss";
+import "../stylesheets/_mainOptions.scss";
+import MainDesign from "./MainDesign";
+import MainForm from "./MainForm";
+import MainShare from "./MainShare";
 
 class App extends React.Component {
   constructor() {
@@ -23,7 +23,7 @@ class App extends React.Component {
         [key]: event.target.value,
       },
       () => {
-        localStorage.setItem('object', JSON.stringify(this.state));
+        localStorage.setItem("object", JSON.stringify(this.state));
       }
     );
 
@@ -37,20 +37,20 @@ class App extends React.Component {
   //}
 
   getLocalStorage() {
-    const localFormData = JSON.parse(localStorage.getItem('object'));
+    const localFormData = JSON.parse(localStorage.getItem("object"));
     if (localFormData === null) {
       return {
         palette: 1,
-        name: '',
-        job: '',
-        phone: '',
-        email: '',
-        linkedin: '',
-        github: '',
-        photo: ''
-          'url(' +
-          'https://i.picasion.com/pic90/275001457e7c33cd30cbc32e7de2aabe.gif' +
-          ')',
+        name: "",
+        job: "",
+        phone: "",
+        email: "",
+        linkedin: "",
+        github: "",
+        photo: "",
+        // 'url(' +
+        // 'https://i.picasion.com/pic90/275001457e7c33cd30cbc32e7de2aabe.gif' +
+        // ')',
       };
     } else {
       return {
