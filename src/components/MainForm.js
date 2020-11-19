@@ -6,111 +6,97 @@ class MainForm extends React.Component {
   constructor(props) {
     super(props);
   }
-
   render() {
+
     return (
       <div>
-        <Include
-          icon="far fa-keyboard"
-          title="Rellena"
-          navclass="navform"
-          id="form"
-        />
-        <section className="hideCollapsable section-form">
-          <form
-            className="form"
-            onChange={this.props.inputChange}
-            action=""
-            method="POST"
-          >
-            <label className="form__label" htmlFor="fullName">
+        <Include icon='far fa-keyboard' title='Rellena' navclass='navform' id='form' />
+        <section className='hideCollapsable section-form'>
+          <form className='form' onChange={this.props.inputChange} action='' method='POST'>
+            <label className='form__label' htmlFor='fullName'>
               Nombre completo
             </label>
             <input
-              className="form__input js-field"
-              id="name"
-              type="text"
-              name="inputForm"
-              placeholder="Ej.: Maléfica"
+              className='form__input js-field'
+              id='name'
+              type='text'
+              name='inputForm'
+              placeholder='Ej.: Maléfica'
               required
-              value={this.props.name}
+              value={this.props.dataFromParent.name}
             />
-            <label className="form__label" htmlFor="position">
+            <label className='form__label' htmlFor='position'>
               Puesto
             </label>
             <input
-              className="form__input js-field"
-              id="job"
-              type="text"
-              name="inputForm"
-              placeholder="Ej.: Bruja malvada"
+              className='form__input js-field'
+              id='job'
+              type='text'
+              name='inputForm'
+              placeholder='Ej.: Bruja malvada'
               required
+              value={this.props.dataFromParent.job}
             />
-            <label className="form__label labelImage" htmlFor="img">
+            <label className='form__label labelImage' htmlFor='img'>
               Imagen de perfil
             </label>
-            <div className="form__wrapperImage">
-              <div className="action">
-                <button
-                  className="action__upload-btn js__profile-trigger"
-                  type="button"
-                >
+            <div className='form__wrapperImage'>
+              <div className='action'>
+                <button className='action__upload-btn js__profile-trigger' type='button'>
                   Añadir imagen
                 </button>
-                <input
-                  type="file"
-                  name=""
-                  id="photo"
-                  className="action__hiddenField js__profile-upload-btn"
-                  required
-                />
+                <input type='file' name='' id='photo' className='action__hiddenField js__profile-upload-btn' required />
               </div>
-              <div className="profile">
-                <div className="profile__preview js__profile-preview"></div>
+              <div className='profile'>
+                <div className='profile__preview js__profile-preview'></div>
               </div>
             </div>
-            <label className="form__label" htmlFor="emailAddress">
+            <label className='form__label' htmlFor='emailAddress'>
               E-mail
             </label>
             <input
-              className="form__input js-field"
-              id="email"
-              type="email"
-              name="inputForm"
-              placeholder="Ej.: malefica@gmail.com"
+              className='form__input js-field'
+              id='email'
+              type='email'
+              name='inputForm'
+              placeholder='Ej.: malefica@gmail.com'
               required
+              value={this.props.dataFromParent.email}
             />
-            <label className="form__label" htmlFor="telephone">
+            <label className='form__label' htmlFor='telephone'>
               Teléfono
             </label>
             <input
-              className="form__input js-field"
-              id="phone"
-              type="tel"
-              name="inputForm"
-              placeholder="Ej.: 666-66-66-66"
+              className='form__input js-field'
+              id='phone'
+              type='tel'
+              name='inputForm'
+              placeholder='Ej.: 666-66-66-66'
               required
+              value={this.props.dataFromParent.phone}
             />
 
-            <label className="form__label" htmlFor="linkedin">
+            <label className='form__label' htmlFor='linkedin'>
               LinkedIn
             </label>
             <input
-              className="form__input js-field"
-              id="linkedin"
-              type="text"
-              name="inputForm"
-              placeholder="Ej.: linkedin.com/in/malefica"
+              className='form__input js-field'
+              id='linkedin'
+              type='text'
+              name='inputForm'
+              placeholder='Ej.: linkedin.com/in/malefica'
+              value={this.props.dataFromParent.linkedin}
             />
-            <label className="form__label" htmlfor="github">
+            <label className='form__label' htmlfor='github'>
               GitHub
             </label>
             <input
-              className="form__input js-field"
-              id="github"
-              type="text"
-              name="inputForm"
-              placeholder="Ej.: @malefica"
+              className='form__input js-field'
+              id='github'
+              type='text'
+              name='inputForm'
+              placeholder='Ej.: @malefica'
+              value={this.props.dataFromParent.github}
             />
           </form>
         </section>

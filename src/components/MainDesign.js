@@ -16,7 +16,7 @@ class MainDesign extends React.Component {
         <section className="collapsableDesign hideCollapsable section-design">
           <h4 className="collapsableDesign__title">Colores</h4>
           <div className="collapsableDesign__palette">
-            <label for="palette1" className="palette1">
+            <label htmlFor="palette1" className="palette1">
               <input
                 className="paletteRadio js-paletteRadio1"
                 id="palette1"
@@ -28,7 +28,7 @@ class MainDesign extends React.Component {
               <div className="palette1__color2"></div>
               <div className="palette1__color3"></div>
             </label>
-            <label for="palette2" className="palette2">
+            <label htmlFor="palette2" className="palette2">
               <input
                 className="paletteRadio js-paletteRadio2"
                 id="palette2"
@@ -40,7 +40,7 @@ class MainDesign extends React.Component {
               <div className="palette2__color2"></div>
               <div className="palette2__color3"></div>
             </label>
-            <label for="palette3" className="palette3">
+            <label htmlFor="palette3" className="palette3">
               <input
                 className="paletteRadio js-paletteRadio3"
                 id="palette3"
@@ -52,7 +52,7 @@ class MainDesign extends React.Component {
               <div className="palette3__color2"></div>
               <div className="palette3__color3"></div>
             </label>
-            <label for="halloween" className="palette4">
+            <label htmlFor="halloween" className="palette4">
               <input
                 className="paletteRadio js-paletteRadio4"
                 id="halloween"

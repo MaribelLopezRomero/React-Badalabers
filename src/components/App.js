@@ -26,10 +26,6 @@ class App extends React.Component {
         localStorage.setItem("object", JSON.stringify(this.state));
       }
     );
-
-    console.log(event.target.value);
-    console.log(this.state.name);
-    console.log(event.target.id);
   }
 
   //componentDidUpdate() {
@@ -66,20 +62,15 @@ class App extends React.Component {
     }
   }
 
-  // return form;
-  // console.log(localFormData);
-  // }
-
   render() {
-    //console.log(this.getLocalStorage());
     return (
       <>
         <Header />
-        <main className="mainProfileCards" role="main">
+        <main className='mainProfileCards' role='main'>
           <MainCard dataFromParent={this.state} />
-          <section className="mainOptions">
+          <section className='mainOptions'>
             <MainDesign />
-            <MainForm inputChange={this.handleChange} />
+            <MainForm inputChange={this.handleChange} dataFromParent={this.state}/>
             <MainShare />
           </section>
         </main>
