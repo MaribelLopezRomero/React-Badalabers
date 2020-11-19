@@ -49,10 +49,12 @@ class App extends React.Component {
     this.setState({
       name: localFormData.name,
       job: localFormData.job,
+      photo: localFormData.photo,
       phone: localFormData.phone,
       mail: localFormData.mail,
       linkedin: localFormData.linkedin,
       github: localFormData.github,
+      palette: localFormData.palette,
     });
   }
 
