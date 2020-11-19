@@ -14,19 +14,7 @@ class App extends React.Component {
     super();
     this.handleChange = this.handleChange.bind(this);
     this.getLocalStorage = this.getLocalStorage.bind(this);
-    this.state = {
-      palette: 1,
-      name: '',
-      job: '',
-      phone: '',
-      email: '',
-      linkedin: '',
-      github: '',
-      photo:
-        'url(' +
-        'https://i.picasion.com/pic90/275001457e7c33cd30cbc32e7de2aabe.gif' +
-        ')',
-    };
+    this.state = this.getLocalStorage();
   }
   handleChange(event) {
     const key = event.target.id;
@@ -44,18 +32,38 @@ class App extends React.Component {
     console.log(event.target.id);
   }
 
+  //componentDidUpdate() {
+  //  localStorage.setItem('object', JSON.stringify(this.state));
+  //}
+
   getLocalStorage() {
     const localFormData = JSON.parse(localStorage.getItem('object'));
-    this.setState({
-      name: localFormData.name,
-      job: localFormData.job,
-      photo: localFormData.photo,
-      phone: localFormData.phone,
-      mail: localFormData.mail,
-      linkedin: localFormData.linkedin,
-      github: localFormData.github,
-      palette: localFormData.palette,
-    });
+    if (localFormData === null) {
+      return {
+        palette: 1,
+        name: '',
+        job: '',
+        phone: '',
+        email: '',
+        linkedin: '',
+        github: '',
+        photo:
+          'url(' +
+          'https://i.picasion.com/pic90/275001457e7c33cd30cbc32e7de2aabe.gif' +
+          ')',
+      };
+    } else {
+      return {
+        name: localFormData.name,
+        job: localFormData.job,
+        photo: localFormData.photo,
+        phone: localFormData.phone,
+        email: localFormData.email,
+        linkedin: localFormData.linkedin,
+        github: localFormData.github,
+        palette: localFormData.palette,
+      };
+    }
   }
 
   // return form;
@@ -63,7 +71,7 @@ class App extends React.Component {
   // }
 
   render() {
-    console.log(this.getLocalStorage());
+    //console.log(this.getLocalStorage());
     return (
       <>
         <Header />
