@@ -13,6 +13,7 @@ class App extends React.Component {
   constructor() {
     super();
     this.handleChange = this.handleChange.bind(this);
+    this.getLocalStorage = this.getLocalStorage.bind(this);
     this.state = {
       palette: 1,
       name: '',
@@ -29,17 +30,38 @@ class App extends React.Component {
   }
   handleChange(event) {
     const key = event.target.id;
-    this.setState({
-      [key]: event.target.value
-    }, () => {
-      localStorage.setItem('object', JSON.stringify(this.state))
-    });
+    this.setState(
+      {
+        [key]: event.target.value,
+      },
+      () => {
+        localStorage.setItem('object', JSON.stringify(this.state));
+      }
+    );
+
     console.log(event.target.value);
     console.log(this.state.name);
     console.log(event.target.id);
   }
 
+  getLocalStorage() {
+    const localFormData = JSON.parse(localStorage.getItem('object'));
+    this.setState({
+      name: localFormData.name,
+      job: localFormData.job,
+      phone: localFormData.phone,
+      mail: localFormData.mail,
+      linkedin: localFormData.linkedin,
+      github: localFormData.github,
+    });
+  }
+
+  // return form;
+  // console.log(localFormData);
+  // }
+
   render() {
+    console.log(this.getLocalStorage());
     return (
       <>
         <Header />
