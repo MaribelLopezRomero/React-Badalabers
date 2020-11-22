@@ -1,18 +1,46 @@
 import React from "react";
 import "../stylesheets/_mainForm.scss";
 import Include from "./Include";
+import '../stylesheets/_hidden.scss'
 
 class MainForm extends React.Component {
   constructor(props) {
     super(props);
+    this.handleCollapsable = this.handleCollapsable.bind(this);
+    this.state = {
+      isHidden: true,
+      arrow: ''
+    };
   }
-  render() {
 
+  handleCollapsable() {
+    if (this.state.isHidden === true) {
+      this.setState({
+        arrow: 'changeArrowOn',
+        isHidden: false,
+      });
+    } else {
+      this.setState({
+        arrow: 'changeArrowOff',
+        isHidden: true,
+      });
+    }
+  }
+  // this.state.isHidden === false ? 'hideLineShare' : '';
+  render() {
+ 
     return (
       <div>
-        <Include icon='far fa-keyboard' title='Rellena' navclass='navform' id='form' />
-        <section className='hideCollapsable section-form'>
-          <form className='form' onChange={this.props.inputChange} action='' method='POST'>
+        <Include
+          icon='far fa-keyboard'
+          title='Rellena'
+          navclass='navForm'
+          id='form'
+          handleCollapsable={this.handleCollapsable}
+          arrow={this.state.arrow}
+        />
+        <section className={`${this.state.isHidden === true ? 'hideCollapsable' : ''} section-form`}>
+          <form className='form' action='' method='POST'>
             <label className='form__label' htmlFor='fullName'>
               Nombre completo
             </label>
@@ -23,7 +51,7 @@ class MainForm extends React.Component {
               name='inputForm'
               placeholder='Ej.: Maléfica'
               required
-              value={this.props.dataFromParent.name}
+              defaultValue={this.props.dataFromParent.name}
             />
             <label className='form__label' htmlFor='position'>
               Puesto
@@ -35,7 +63,7 @@ class MainForm extends React.Component {
               name='inputForm'
               placeholder='Ej.: Bruja malvada'
               required
-              value={this.props.dataFromParent.job}
+              defaultValue={this.props.dataFromParent.job}
             />
             <label className='form__label labelImage' htmlFor='img'>
               Imagen de perfil
@@ -61,7 +89,7 @@ class MainForm extends React.Component {
               name='inputForm'
               placeholder='Ej.: malefica@gmail.com'
               required
-              value={this.props.dataFromParent.email}
+              defaultValue={this.props.dataFromParent.email}
             />
             <label className='form__label' htmlFor='telephone'>
               Teléfono
@@ -73,7 +101,7 @@ class MainForm extends React.Component {
               name='inputForm'
               placeholder='Ej.: 666-66-66-66'
               required
-              value={this.props.dataFromParent.phone}
+              defaultValue={this.props.dataFromParent.phone}
             />
 
             <label className='form__label' htmlFor='linkedin'>
@@ -85,9 +113,9 @@ class MainForm extends React.Component {
               type='text'
               name='inputForm'
               placeholder='Ej.: linkedin.com/in/malefica'
-              value={this.props.dataFromParent.linkedin}
+              defaultValue={this.props.dataFromParent.linkedin}
             />
-            <label className='form__label' htmlfor='github'>
+            <label className='form__label' htmlFor='github'>
               GitHub
             </label>
             <input
@@ -96,7 +124,7 @@ class MainForm extends React.Component {
               type='text'
               name='inputForm'
               placeholder='Ej.: @malefica'
-              value={this.props.dataFromParent.github}
+              defaultValue={this.props.dataFromParent.github}
             />
           </form>
         </section>

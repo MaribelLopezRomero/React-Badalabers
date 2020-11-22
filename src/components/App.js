@@ -14,8 +14,10 @@ class App extends React.Component {
     super();
     this.handleChange = this.handleChange.bind(this);
     this.getLocalStorage = this.getLocalStorage.bind(this);
+    this.handleReset = this.handleReset.bind(this);
     this.state = this.getLocalStorage();
   }
+
   handleChange(event) {
     const key = event.target.id;
     this.setState(
@@ -23,7 +25,7 @@ class App extends React.Component {
         [key]: event.target.value,
       },
       () => {
-        localStorage.setItem("object", JSON.stringify(this.state));
+        localStorage.setItem('object', JSON.stringify(this.state));
       }
     );
   }
@@ -33,17 +35,17 @@ class App extends React.Component {
   //}
 
   getLocalStorage() {
-    const localFormData = JSON.parse(localStorage.getItem("object"));
+    const localFormData = JSON.parse(localStorage.getItem('object'));
     if (localFormData === null) {
       return {
         palette: 1,
-        name: "",
-        job: "",
-        phone: "",
-        email: "",
-        linkedin: "",
-        github: "",
-        photo: "",
+        name: '',
+        job: '',
+        phone: '',
+        email: '',
+        linkedin: '',
+        github: '',
+        photo: '',
         // 'url(' +
         // 'https://i.picasion.com/pic90/275001457e7c33cd30cbc32e7de2aabe.gif' +
         // ')',
@@ -62,21 +64,33 @@ class App extends React.Component {
     }
   }
 
+  handleReset() {
+ 
+  }
   render() {
-    return (
-      <>
-        <Header />
-        <main className='mainProfileCards' role='main'>
-          <MainCard dataFromParent={this.state} />
-          <section className='mainOptions'>
-            <MainDesign />
-            <MainForm inputChange={this.handleChange} dataFromParent={this.state}/>
-            <MainShare />
-          </section>
-        </main>
-        <Footer />
-      </>
-    );
+      return (
+        <>
+          <Header />
+          <main className='mainProfileCards' role='main'>
+            <MainCard handleReset={this.handleReset} dataFromParent={this.state} />
+            <section className='mainOptions'>
+              <MainDesign
+                inputChange={this.handleChange}
+                dataFromParent={this.state}
+              />
+              <MainForm
+                inputChange={this.handleChange}
+                dataFromParent={this.state}
+              />
+              <MainShare
+                handleCollapsable={this.handleCollapsable}
+                dataFromParent={this.state}
+              />
+            </section>
+          </main>
+          <Footer />
+        </>
+      );
   }
 }
 
