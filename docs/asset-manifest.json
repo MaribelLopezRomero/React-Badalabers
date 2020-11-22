@@ -1,20 +1,20 @@
 {
   "files": {
-    "main.css": "/static/css/main.b80fdf8e.chunk.css",
-    "main.js": "/static/js/main.d55b339f.chunk.js",
-    "main.js.map": "/static/js/main.d55b339f.chunk.js.map",
-    "runtime-main.js": "/static/js/runtime-main.7d9344d6.js",
-    "runtime-main.js.map": "/static/js/runtime-main.7d9344d6.js.map",
-    "static/js/2.8ab96b33.chunk.js": "/static/js/2.8ab96b33.chunk.js",
-    "static/js/2.8ab96b33.chunk.js.map": "/static/js/2.8ab96b33.chunk.js.map",
-    "index.html": "/index.html",
-    "static/css/main.b80fdf8e.chunk.css.map": "/static/css/main.b80fdf8e.chunk.css.map",
-    "static/js/2.8ab96b33.chunk.js.LICENSE.txt": "/static/js/2.8ab96b33.chunk.js.LICENSE.txt",
-    "static/media/logo-awesome-profile-cards.a65df2b2.svg": "/static/media/logo-awesome-profile-cards.a65df2b2.svg",
-    "static/media/logo-devilappers.310a6f20.svg": "/static/media/logo-devilappers.310a6f20.svg"
+    "main.css": "./static/css/main.b80fdf8e.chunk.css",
+    "main.js": "./static/js/main.d55b339f.chunk.js",
+    "main.js.map": "./static/js/main.d55b339f.chunk.js.map",
+    "runtime-main.js": "./static/js/runtime-main.9e308f2d.js",
+    "runtime-main.js.map": "./static/js/runtime-main.9e308f2d.js.map",
+    "static/js/2.8ab96b33.chunk.js": "./static/js/2.8ab96b33.chunk.js",
+    "static/js/2.8ab96b33.chunk.js.map": "./static/js/2.8ab96b33.chunk.js.map",
+    "index.html": "./index.html",
+    "static/css/main.b80fdf8e.chunk.css.map": "./static/css/main.b80fdf8e.chunk.css.map",
+    "static/js/2.8ab96b33.chunk.js.LICENSE.txt": "./static/js/2.8ab96b33.chunk.js.LICENSE.txt",
+    "static/media/logo-awesome-profile-cards.a65df2b2.svg": "./static/media/logo-awesome-profile-cards.a65df2b2.svg",
+    "static/media/logo-devilappers.310a6f20.svg": "./static/media/logo-devilappers.310a6f20.svg"
   },
   "entrypoints": [
-    "static/js/runtime-main.7d9344d6.js",
+    "static/js/runtime-main.9e308f2d.js",
     "static/js/2.8ab96b33.chunk.js",
     "static/css/main.b80fdf8e.chunk.css",
     "static/js/main.d55b339f.chunk.js"
