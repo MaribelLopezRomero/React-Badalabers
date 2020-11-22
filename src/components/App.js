@@ -14,7 +14,7 @@ class App extends React.Component {
     super();
     this.handleChange = this.handleChange.bind(this);
     this.getLocalStorage = this.getLocalStorage.bind(this);
-    this.handleReset = this.handleReset.bind(this);
+    // this.handleReset = this.handleReset.bind(this);
     this.state = this.getLocalStorage();
   }
 
@@ -64,9 +64,9 @@ class App extends React.Component {
     }
   }
 
-  handleReset() {
+  // handleReset() {
  
-  }
+  // }
   render() {
       return (
         <>
@@ -74,18 +74,9 @@ class App extends React.Component {
           <main className='mainProfileCards' role='main'>
             <MainCard handleReset={this.handleReset} dataFromParent={this.state} />
             <section className='mainOptions'>
-              <MainDesign
-                inputChange={this.handleChange}
-                dataFromParent={this.state}
-              />
-              <MainForm
-                inputChange={this.handleChange}
-                dataFromParent={this.state}
-              />
-              <MainShare
-                handleCollapsable={this.handleCollapsable}
-                dataFromParent={this.state}
-              />
+              <MainDesign inputChange={this.handleChange} dataFromParent={this.state} />
+              <MainForm inputChange={this.handleChange} dataFromParent={this.state} />
+              <MainShare dataFromParent={this.state} />
             </section>
           </main>
           <Footer />

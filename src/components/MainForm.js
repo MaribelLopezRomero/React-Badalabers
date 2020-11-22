@@ -28,7 +28,6 @@ class MainForm extends React.Component {
   }
   // this.state.isHidden === false ? 'hideLineShare' : '';
   render() {
- 
     return (
       <div>
         <Include
@@ -40,7 +39,7 @@ class MainForm extends React.Component {
           arrow={this.state.arrow}
         />
         <section className={`${this.state.isHidden === true ? 'hideCollapsable' : ''} section-form`}>
-          <form className='form' action='' method='POST'>
+          <form onChange={this.props.inputChange} className='form' action='' method='POST'>
             <label className='form__label' htmlFor='fullName'>
               Nombre completo
             </label>
