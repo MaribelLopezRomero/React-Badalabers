@@ -14,7 +14,7 @@ class App extends React.Component {
     super();
     this.handleChange = this.handleChange.bind(this);
     this.getLocalStorage = this.getLocalStorage.bind(this);
-    // this.handleReset = this.handleReset.bind(this);
+    this.handleReset = this.handleReset.bind(this);
     this.state = this.getLocalStorage();
   }
 
@@ -64,9 +64,21 @@ class App extends React.Component {
     }
   }
 
-  // handleReset() {
- 
-  // }
+  handleReset() {
+    this.setState({
+      palette: 1,
+      name: '',
+      job: '',
+      phone: '',
+      email: '',
+      linkedin: '',
+      github: '',
+      photo: '',
+      // 'url(' +
+      // 'https://i.picasion.com/pic90/275001457e7c33cd30cbc32e7de2aabe.gif' +
+      // ')',
+    });
+  }
   render() {
       return (
         <>
