@@ -8,6 +8,7 @@ import "../stylesheets/_mainOptions.scss";
 import MainDesign from "./MainDesign";
 import MainForm from "./MainForm";
 import MainShare from "./MainShare";
+import Api from "../service/Api";
 
 class App extends React.Component {
   constructor() {
@@ -25,7 +26,7 @@ class App extends React.Component {
         [key]: event.target.value,
       },
       () => {
-        localStorage.setItem('object', JSON.stringify(this.state));
+        localStorage.setItem("object", JSON.stringify(this.state));
       }
     );
   }
@@ -35,17 +36,17 @@ class App extends React.Component {
   //}
 
   getLocalStorage() {
-    const localFormData = JSON.parse(localStorage.getItem('object'));
+    const localFormData = JSON.parse(localStorage.getItem("object"));
     if (localFormData === null) {
       return {
         palette: 1,
-        name: '',
-        job: '',
-        phone: '',
-        email: '',
-        linkedin: '',
-        github: '',
-        photo: '',
+        name: "",
+        job: "",
+        phone: "",
+        email: "",
+        linkedin: "",
+        github: "",
+        photo: "",
         // 'url(' +
         // 'https://i.picasion.com/pic90/275001457e7c33cd30cbc32e7de2aabe.gif' +
         // ')',
@@ -67,33 +68,42 @@ class App extends React.Component {
   handleReset() {
     this.setState({
       palette: 1,
-      name: '',
-      job: '',
-      phone: '',
-      email: '',
-      linkedin: '',
-      github: '',
-      photo: '',
+      name: "",
+      job: "",
+      phone: "",
+      email: "",
+      linkedin: "",
+      github: "",
+      photo: "",
       // 'url(' +
       // 'https://i.picasion.com/pic90/275001457e7c33cd30cbc32e7de2aabe.gif' +
       // ')',
     });
   }
   render() {
-      return (
-        <>
-          <Header />
-          <main className='mainProfileCards' role='main'>
-            <MainCard handleReset={this.handleReset} dataFromParent={this.state} />
-            <section className='mainOptions'>
-              <MainDesign inputChange={this.handleChange} dataFromParent={this.state} />
-              <MainForm inputChange={this.handleChange} dataFromParent={this.state} />
-              <MainShare dataFromParent={this.state} />
-            </section>
-          </main>
-          <Footer />
-        </>
-      );
+    return (
+      <>
+        <Header />
+        <main className="mainProfileCards" role="main">
+          <MainCard
+            handleReset={this.handleReset}
+            dataFromParent={this.state}
+          />
+          <section className="mainOptions">
+            <MainDesign
+              inputChange={this.handleChange}
+              dataFromParent={this.state}
+            />
+            <MainForm
+              inputChange={this.handleChange}
+              dataFromParent={this.state}
+            />
+            <MainShare dataFromParent={this.state} />
+          </section>
+        </main>
+        <Footer />
+      </>
+    );
   }
 }
 
