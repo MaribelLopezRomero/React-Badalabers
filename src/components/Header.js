@@ -1,12 +1,14 @@
 import '../stylesheets/_header.scss';
 import React from 'react';
 import logo from '../images/logo-awesome-profile-cards.svg';
+import {Link} from 'react-router-dom';
 
 class Header extends React.Component {
   render() {
     return (
-      <>
+    
         <header className="header" role="banner">
+         <Link to = "/">
           <div>
             <a href="./index.html">
               <img
@@ -17,8 +19,9 @@ class Header extends React.Component {
               />
             </a>
           </div>
+          </Link>
         </header>
-      </>
+     
     );
   }
 }
