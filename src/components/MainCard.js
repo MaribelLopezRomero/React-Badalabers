@@ -3,9 +3,6 @@ import '../stylesheets/_mainCard.scss';
 import '../stylesheets/_colorOptions.scss';
 
 class MainCard extends React.Component {
-  constructor(props) {
-    super(props);
-  }
   render() {
     return (
       <>
@@ -25,9 +22,6 @@ class MainCard extends React.Component {
                 {this.props.dataFromParent.job || 'Front-end developer'}
               </h2>
               <div className='profile'>
-                {/* <!-- <div className="profile__image js__profile-image">
-          <img className="js-cardImg" src="" alt="" />
-        </div> --> */}
                 <div
                   className='profile__image js__profile-image'
                   style={{

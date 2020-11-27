@@ -2,9 +2,6 @@ import React from 'react';
 import '../stylesheets/_menu.scss';
 
 class Include extends React.Component {
-  constructor(props) {
-    super(props);
-  }
   handleCollapsable() {
     this.props.handleCollapsable();
   }

@@ -8,14 +8,59 @@ import '../stylesheets/_mainOptions.scss';
 import MainDesign from './MainDesign';
 import MainForm from './MainForm';
 import MainShare from './MainShare';
+import api from "../service/api";
 
 class CardGenerator extends React.Component {
   constructor() {
     super();
+    this.state = {
+      palette: 1,
+      name: '',
+      job: '',
+      phone: '',
+      email: '',
+      linkedin: '',
+      github: '',
+      photo: '',
+      apiSuccess: false,
+      apiCardUrl: '',
+      apiError: '',
+    };
+
     this.handleChange = this.handleChange.bind(this);
     this.getLocalStorage = this.getLocalStorage.bind(this);
     this.handleReset = this.handleReset.bind(this);
     this.state = this.getLocalStorage();
+    this.sendRequest = this.sendRequest.bind(this);
+  }
+
+  sendRequest() {
+    const apiData = {
+      name: this.state.name,
+      job: this.state.job,
+      photo: this.state.photo,
+      phone: this.state.phone,
+      email: this.state.email,
+      linkedin: this.state.linkedin,
+      github: this.state.github,
+      palette: this.state.palette,
+    };
+    api(apiData).then((response) => {
+      if (response.success === true) {
+        this.setState({
+          apiSuccess: true,
+          apiCardUrl: response.cardURL,
+          apiError: '',
+        });
+        console.log(this.state.apiCardUrl);
+      } else {
+        this.setState({
+          apiSuccess: false,
+          apiCardUrl: '',
+          apiError: response.error,
+        });
+      }
+    });
   }
 
   handleChange(event) {
@@ -97,7 +142,7 @@ class CardGenerator extends React.Component {
               inputChange={this.handleChange}
               dataFromParent={this.state}
             />
-            <MainShare dataFromParent={this.state} />
+            <MainShare sendRequest= {this.sendRequest} dataFromParent={this.state} />
           </section>
         </main>
         <Footer />
