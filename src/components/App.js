@@ -4,18 +4,16 @@ import CardGenerator from './CardGenerator';
 import { Route, Switch } from 'react-router-dom';
 
 class App extends React.Component {
-    render() {
-      return (
-        <>
-          <Switch>
-            <Route exact path = '/'> <Landing /></Route>
-            <Route path = '/card-generator'> <CardGenerator/> </Route> 
-          </Switch>
-        </>
-      );
-    }
+  render() {
+    return (
+      <>
+        <Switch>
+          <Route exact path='/' component={Landing} />
+          <Route path='/card-generator' component={CardGenerator} />
+        </Switch>
+      </>
+    );
   }
-  
-  export default  App;
+}
 
-  
+export default App;

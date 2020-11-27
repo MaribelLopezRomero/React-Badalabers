@@ -10,14 +10,13 @@ class Header extends React.Component {
         <header className="header" role="banner">
          <Link to = "/">
           <div>
-            <a href="./index.html">
               <img
                 className="header__image"
                 src={logo}
                 alt="Logo crea tu propia tarjeta de visita"
                 title="Vuelve a la página de bienvenida"
               />
-            </a>
+
           </div>
           </Link>
         </header>

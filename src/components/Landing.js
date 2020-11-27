@@ -1,16 +1,19 @@
 import '../stylesheets/_landing.scss';
 import React from 'react';
-import {Link} from 'react-router-dom';
+import { Link } from 'react-router-dom';
+import Footer from './Footer';
+import logo from '../images/logo-awesome-profile-cards.svg';
 
 class Landing extends React.Component {
   render() {
     return (
+      <>
       <main className='mainLanding' role='main'>
         <div className='mainLanding__logo'>
           <a href='./profileCards.html' title='Ir a crear tu tarjeta de visita'>
             <img
               className='mainLanding__logo--img'
-              src='./assets/images/logo-awesome-profile-cards.svg'
+              src= {logo}
               alt='Logo crea tu propia tarjeta de visita'
               title='Logo crea tu propia tarjeta de visita'
             />
@@ -46,18 +49,20 @@ class Landing extends React.Component {
             </li>
           </ul>
         </section>
-        <Link to ='/card-generator'>
-          <div className='mainLanding__link' role='link'>
-            <a
-              className='mainLanding__link--text'
-              href='./profileCards.html'
-              title='Ir a crear tu tarjeta de visita'
-            >
-              Comenzar
-            </a>
-          </div>
-        </Link>
+
+        <div className='mainLanding__link' role='link'>
+          <Link
+            to='/card-generator'
+            className='mainLanding__link--text'
+        
+            title='Ir a crear tu tarjeta de visita'
+          >
+            Comenzar
+          </Link>
+        </div>
       </main>
+      <Footer />
+      </>
     );
   }
 }
