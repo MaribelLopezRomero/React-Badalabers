@@ -65,14 +65,26 @@ class CardGenerator extends React.Component {
 
   handleChange(event) {
     const key = event.target.id;
-    this.setState(
-      {
-        [key]: event.target.value,
-      },
-      () => {
-        localStorage.setItem('object', JSON.stringify(this.state));
-      }
-    );
+    let maxLength;
+    if (event.target.id === 'name') {
+      maxLength = 16;
+    } else if (event.target.id === 'job') {
+      maxLength = 20;
+    } else {
+      maxLength = 50;
+    }
+    if (event.target.value.length < maxLength) {
+      this.setState(
+        {
+          [key]: event.target.value,
+        },
+        () => {
+          localStorage.setItem('object', JSON.stringify(this.state));
+        }
+      );
+    } else {
+      event.target.value = event.target.value.slice(0, maxLength);
+    }
   }
 
   //componentDidUpdate() {
@@ -110,6 +122,7 @@ class CardGenerator extends React.Component {
   }
 
   handleReset() {
+    localStorage.clear();
     this.setState({
       palette: 1,
       name: '',
