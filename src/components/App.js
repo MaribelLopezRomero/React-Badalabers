@@ -20,13 +20,9 @@ class App extends React.Component {
   }
 
   updateAvatar(image) {
-    const {avatar} = this.state;
-    this.setState(prevState => {
-      const newAvatar = {...avatar, avatar: image};
-      return {
-        avatar: newAvatar,
+    this.setState({
+        avatar: image,
         isAvatarDefault: false
-      }
     });
   }
 
