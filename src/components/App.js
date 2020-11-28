@@ -19,10 +19,10 @@ class App extends React.Component {
     this.state = this.getLocalStorage();
   }
 
-  updateAvatar(img) {
+  updateAvatar(image) {
     const {profile} = this.state;
     this.setState(prevState => {
-      const newProfile = {...profile, avatar: img};
+      const newProfile = {...profile, avatar: image};
       return {
         profile: newProfile,
         isAvatarDefault: false
@@ -60,7 +60,7 @@ class App extends React.Component {
         github: '',
         isAvatarDefault: true,
         profile: {
-          avatar: 'url(https://i.picasion.com/pic90/275001457e7c33cd30cbc32e7de2aabe.gif)',
+          avatar: 'https://i.picasion.com/pic90/275001457e7c33cd30cbc32e7de2aabe.gif)',
         },
       };
     } else {
@@ -92,7 +92,7 @@ class App extends React.Component {
       github: '',
       isAvatarDefault: true,
       profile: {
-        avatar: 'url(https://i.picasion.com/pic90/275001457e7c33cd30cbc32e7de2aabe.gif)',
+        avatar: 'https://i.picasion.com/pic90/275001457e7c33cd30cbc32e7de2aabe.gif',
       },
     });
   }
@@ -118,11 +118,4 @@ class App extends React.Component {
     );
   }
 }
-//  <GetAvatar 
-//           avatar={profile.avatar} 
-//           isAvatarDefault={isAvatarDefault} 
-//           updateAvatar={this.updateAvatar} />
-        
-//         <Profile avatar={profile.avatar} />
-
 export default App;
