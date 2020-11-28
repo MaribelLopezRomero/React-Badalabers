@@ -2,6 +2,7 @@ import React from "react";
 import "../stylesheets/_mainForm.scss";
 import Include from "./Include";
 import '../stylesheets/_hidden.scss'
+import GetAvatar from './GetAvatar';
 
 class MainForm extends React.Component {
   constructor(props) {
@@ -64,20 +65,7 @@ class MainForm extends React.Component {
               required
               value={this.props.dataFromParent.job}
             />
-            <label className='form__label labelImage' htmlFor='img'>
-              Imagen de perfil
-            </label>
-            <div className='form__wrapperImage'>
-              <div className='action'>
-                <button className='action__upload-btn js__profile-trigger' type='button'>
-                  Añadir imagen
-                </button>
-                <input type='file' name='' id='photo' className='action__hiddenField js__profile-upload-btn' required />
-              </div>
-              <div className='profile'>
-                <div className='profile__preview js__profile-preview'></div>
-              </div>
-            </div>
+            <GetAvatar avatar={this.props.avatar} isAvatarDefault={this.props.isAvatarDefault} updateAvatar={this.props.updateAvatar} />
             <label className='form__label' htmlFor='emailAddress'>
               E-mail
             </label>

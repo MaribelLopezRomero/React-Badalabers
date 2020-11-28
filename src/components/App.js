@@ -15,36 +15,37 @@ class App extends React.Component {
     this.handleChange = this.handleChange.bind(this);
     this.getLocalStorage = this.getLocalStorage.bind(this);
     this.handleReset = this.handleReset.bind(this);
+    this.updateAvatar = this.updateAvatar.bind(this);
     this.state = this.getLocalStorage();
+  }
+
+  updateAvatar(img) {
+    const {profile} = this.state;
+    this.setState(prevState => {
+      const newProfile = {...profile, avatar: img};
+      return {
+        profile: newProfile,
+        isAvatarDefault: false
+      }
+    });
   }
 
   handleChange(event) {
     const key = event.target.id;
-    let maxLength;
     if (event.target.id === 'name') {
-      maxLength = 16;
+     event.target.value = event.target.value.slice(0, 16);
     } else if (event.target.id === 'job') {
-      maxLength = 20;
-    } else {
-      maxLength = 50;
+    event.target.value = event.target.value.slice(0, 20);
     }
-    if (event.target.value.length < maxLength) {
-      this.setState(
-        {
-          [key]: event.target.value,
-        },
-        () => {
-          localStorage.setItem('object', JSON.stringify(this.state));
-        }
-      );
-    } else {
-      event.target.value = event.target.value.slice(0, maxLength);
-    }
+    this.setState(
+      {
+        [key]: event.target.value,
+      },
+      () => {
+        localStorage.setItem('object', JSON.stringify(this.state));
+      }
+    );
   }
-
-  //componentDidUpdate() {
-  //  localStorage.setItem('object', JSON.stringify(this.state));
-  //}
 
   getLocalStorage() {
     const localFormData = JSON.parse(localStorage.getItem('object'));
@@ -57,21 +58,24 @@ class App extends React.Component {
         email: '',
         linkedin: '',
         github: '',
-        photo: '',
-        // 'url(' +
-        // 'https://i.picasion.com/pic90/275001457e7c33cd30cbc32e7de2aabe.gif' +
-        // ')',
+        isAvatarDefault: true,
+        profile: {
+          avatar: 'url(https://i.picasion.com/pic90/275001457e7c33cd30cbc32e7de2aabe.gif)',
+        },
       };
     } else {
       return {
         name: localFormData.name,
         job: localFormData.job,
-        photo: localFormData.photo,
         phone: localFormData.phone,
         email: localFormData.email,
         linkedin: localFormData.linkedin,
         github: localFormData.github,
         palette: localFormData.palette,
+        isAvatarDefault: localFormData.isAvatarDefault,
+        profile: {
+          avatar: localFormData.profile.avatar,
+        },
       };
     }
   }
@@ -86,22 +90,26 @@ class App extends React.Component {
       email: '',
       linkedin: '',
       github: '',
-      photo: '',
-      // 'url(' +
-      // 'https://i.picasion.com/pic90/275001457e7c33cd30cbc32e7de2aabe.gif' +
-      // ')',
+      isAvatarDefault: true,
+      profile: {
+        avatar: 'url(https://i.picasion.com/pic90/275001457e7c33cd30cbc32e7de2aabe.gif)',
+      },
     });
   }
 
   render() {
+    console.log(this.state);
     return (
       <>
         <Header />
         <main className='mainProfileCards' role='main'>
-          <MainCard handleReset={this.handleReset} dataFromParent={this.state} />
+          <MainCard
+            handleReset={this.handleReset}
+            dataFromParent={this.state}
+          />
           <section className='mainOptions'>
             <MainDesign inputChange={this.handleChange} dataFromParent={this.state} />
-            <MainForm inputChange={this.handleChange} dataFromParent={this.state} />
+            <MainForm updateAvatar={this.updateAvatar} inputChange={this.handleChange} dataFromParent={this.state} />
             <MainShare dataFromParent={this.state} />
           </section>
         </main>
@@ -110,5 +118,11 @@ class App extends React.Component {
     );
   }
 }
+//  <GetAvatar 
+//           avatar={profile.avatar} 
+//           isAvatarDefault={isAvatarDefault} 
+//           updateAvatar={this.updateAvatar} />
+        
+//         <Profile avatar={profile.avatar} />
 
 export default App;

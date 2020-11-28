@@ -1,6 +1,7 @@
 import React from 'react';
 import '../stylesheets/_mainCard.scss';
 import '../stylesheets/_colorOptions.scss';
+import '../stylesheets/Profile.scss';
 
 class MainCard extends React.Component {
   constructor(props) {
@@ -25,15 +26,7 @@ class MainCard extends React.Component {
                 {this.props.dataFromParent.job || 'Front-end developer'}
               </h2>
               <div className='profile'>
-                {/* <!-- <div className="profile__image js__profile-image">
-          <img className="js-cardImg" src="" alt="" />
-        </div> --> */}
-                <div
-                  className='profile__image js__profile-image'
-                  style={{
-                    backgroundImage: 'url(' + 'https://i.picasion.com/pic90/275001457e7c33cd30cbc32e7de2aabe.gif' + ')',
-                  }}
-                ></div>
+                <div className='profile__avatar' style={{ backgroundImage: `url(${this.props.dataFromParent.profile.avatar})` }}></div>
               </div>
               <nav>
                 <ul className='mainCard__wrapper--list'>
@@ -73,7 +66,8 @@ class MainCard extends React.Component {
                       target='_blank'
                       rel='noreferrer'
                       className={`socialLink__link js-tlCard js-icon2 palette${this.props.dataFromParent.palette}_icon`}
-                      ><i className='fab fa-github-alt' aria-hidden='true'></i>
+                    >
+                      <i className='fab fa-github-alt' aria-hidden='true'></i>
                     </a>
                   </li>
                 </ul>

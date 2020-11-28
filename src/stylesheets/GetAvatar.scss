@@ -1,0 +1,10 @@
+@import "./variables";
+.get-avatar__preview {
+  width: 30px;
+    height: 30px;
+    margin-left: 20px;
+    border: solid 1px $colorPal1Light;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
