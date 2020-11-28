@@ -26,7 +26,7 @@ class MainCard extends React.Component {
                 {this.props.dataFromParent.job || 'Front-end developer'}
               </h2>
               <div className='profile'>
-                <div className='profile__avatar' style={{ backgroundImage: `url(${this.props.dataFromParent.profile.avatar})` }}></div>
+                <div className='profile__avatar' style={{ backgroundImage: `url(${this.props.dataFromParent.avatar})` }}></div>
               </div>
               <nav>
                 <ul className='mainCard__wrapper--list'>

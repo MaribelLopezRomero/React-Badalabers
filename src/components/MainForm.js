@@ -65,7 +65,7 @@ class MainForm extends React.Component {
               required
               value={this.props.dataFromParent.job}
             />
-            <GetAvatar avatar={this.props.dataFromParent.profile.avatar} isAvatarDefault={this.props.dataFromParent.isAvatarDefault} updateAvatar={this.props.updateAvatar} />
+            <GetAvatar avatar={this.props.dataFromParent.avatar} isAvatarDefault={this.props.dataFromParent.isAvatarDefault} updateAvatar={this.props.updateAvatar} />
             <label className='form__label' htmlFor='emailAddress'>
               E-mail
             </label>

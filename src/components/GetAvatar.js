@@ -44,7 +44,7 @@ class GetAvatar extends Component {
                 <button className='action__upload-btn js__profile-trigger get-avatar__trigger' type='button' onClick={this.handleFilePicker}>
                   Añadir imagen
                 </button>
-                <input type='file' name='' id='photo' ref={this.myFileField}className='action__hiddenField js__profile-upload-btn get-avatar__upload-field' required />
+                <input type='file' name='' id='avatar' ref={this.myFileField}className='action__hiddenField js__profile-upload-btn get-avatar__upload-field' required />
               </div>
               <div className='profile'>
                 <div className='profile__preview js__profile-preview get-avatar__preview' style={this.getPreview(this.props.isAvatarDefault, this.props.avatar)}></div>

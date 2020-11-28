@@ -20,11 +20,11 @@ class App extends React.Component {
   }
 
   updateAvatar(image) {
-    const {profile} = this.state;
+    const {avatar} = this.state;
     this.setState(prevState => {
-      const newProfile = {...profile, avatar: image};
+      const newAvatar = {...avatar, avatar: image};
       return {
-        profile: newProfile,
+        avatar: newAvatar,
         isAvatarDefault: false
       }
     });
@@ -59,9 +59,7 @@ class App extends React.Component {
         linkedin: '',
         github: '',
         isAvatarDefault: true,
-        profile: {
-          avatar: 'https://i.picasion.com/pic90/275001457e7c33cd30cbc32e7de2aabe.gif)',
-        },
+        avatar: 'https://i.picasion.com/pic90/275001457e7c33cd30cbc32e7de2aabe.gif'
       };
     } else {
       return {
@@ -72,10 +70,8 @@ class App extends React.Component {
         linkedin: localFormData.linkedin,
         github: localFormData.github,
         palette: localFormData.palette,
-        isAvatarDefault: localFormData.isAvatarDefault,
-        profile: {
-          avatar: localFormData.profile.avatar,
-        },
+        isAvatarDefault: false,
+        avatar: localFormData.avatar
       };
     }
   }
@@ -91,9 +87,7 @@ class App extends React.Component {
       linkedin: '',
       github: '',
       isAvatarDefault: true,
-      profile: {
-        avatar: 'https://i.picasion.com/pic90/275001457e7c33cd30cbc32e7de2aabe.gif',
-      },
+      avatar: 'https://i.picasion.com/pic90/275001457e7c33cd30cbc32e7de2aabe.gif'
     });
   }
 
