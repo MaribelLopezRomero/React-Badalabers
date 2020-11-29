@@ -51,7 +51,7 @@ class CardGenerator extends React.Component {
   //   });
   // }
 
- updateAvatar(image) {
+  updateAvatar(image) {
     this.setState({
       avatar: image,
       isAvatarDefault: false,
@@ -60,16 +60,20 @@ class CardGenerator extends React.Component {
 
   handleChange(event) {
     const key = event.target.id;
+    let value;
     if (event.target.id === 'name') {
-      event.target.value = event.target.value.slice(0, 16);
+      value = event.target.value.slice(0, 16);
     } else if (event.target.id === 'job') {
-      event.target.value = event.target.value.slice(0, 20);
+      value = event.target.value.slice(0, 20);
+    } else if (event.target.type === 'file') {
+      value = this.state.avatar; 
     }
     this.setState(
       {
-        [key]: event.target.value,
+        [key]: value,
       },
       () => {
+        console.log(this.state);
         localStorage.setItem('object', JSON.stringify(this.state));
       }
     );
