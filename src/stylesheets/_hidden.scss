@@ -6,7 +6,7 @@
   border-bottom-style: none;
 }
 
-.changeArrowOn, .changeArrowOff {
-  transform: rotate(180deg);
-  transition: 0.5s;
+.changeArrow:focus {
+  transform: rotate(360deg);
+  transition: 0.7s;
 }

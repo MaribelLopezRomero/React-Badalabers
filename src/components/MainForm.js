@@ -10,19 +10,16 @@ class MainForm extends React.Component {
     this.handleCollapsable = this.handleCollapsable.bind(this);
     this.state = {
       isHidden: true,
-      arrow: ''
     };
   }
 
   handleCollapsable() {
     if (this.state.isHidden === true) {
       this.setState({
-        arrow: 'changeArrowOn',
         isHidden: false,
       });
     } else {
       this.setState({
-        arrow: 'changeArrowOff',
         isHidden: true,
       });
     }
