@@ -8,7 +8,7 @@ import '../stylesheets/_mainOptions.scss';
 import MainDesign from './MainDesign';
 import MainForm from './MainForm';
 import MainShare from './MainShare';
-import api from "../service/api";
+// import api from "../service/api";
 
 class CardGenerator extends React.Component {
   constructor() {
@@ -18,38 +18,38 @@ class CardGenerator extends React.Component {
     this.getLocalStorage = this.getLocalStorage.bind(this);
     this.handleReset = this.handleReset.bind(this);
     this.state = this.getLocalStorage();
-    this.sendRequest = this.sendRequest.bind(this);
+    // this.sendRequest = this.sendRequest.bind(this);
     this.updateAvatar = this.updateAvatar.bind(this);
   }
 
-  sendRequest() {
-    const apiData = {
-      name: this.state.name,
-      job: this.state.job,
-      photo: this.state.photo,
-      phone: this.state.phone,
-      email: this.state.email,
-      linkedin: this.state.linkedin,
-      github: this.state.github,
-      palette: this.state.palette,
-    };
-    api(apiData).then((response) => {
-      if (response.success === true) {
-        this.setState({
-          apiSuccess: true,
-          apiCardUrl: response.cardURL,
-          apiError: '',
-        });
-        console.log(this.state.apiCardUrl);
-      } else {
-        this.setState({
-          apiSuccess: false,
-          apiCardUrl: '',
-          apiError: response.error,
-        });
-      }
-    });
-  }
+  // sendRequest() {
+  //   const apiData = {
+  //     name: this.state.name,
+  //     job: this.state.job,
+  //     photo: this.state.photo,
+  //     phone: this.state.phone,
+  //     email: this.state.email,
+  //     linkedin: this.state.linkedin,
+  //     github: this.state.github,
+  //     palette: this.state.palette,
+  //   };
+  //   api(apiData).then((response) => {
+  //     if (response.success === true) {
+  //       this.setState({
+  //         apiSuccess: true,
+  //         apiCardUrl: response.cardURL,
+  //         apiError: '',
+  //       });
+  //       console.log(this.state.apiCardUrl);
+  //     } else {
+  //       this.setState({
+  //         apiSuccess: false,
+  //         apiCardUrl: '',
+  //         apiError: response.error,
+  //       });
+  //     }
+  //   });
+  // }
 
  updateAvatar(image) {
     this.setState({
