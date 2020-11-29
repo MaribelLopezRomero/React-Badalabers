@@ -34,23 +34,34 @@ class GetAvatar extends Component {
   }
 
   render() {
-    return ( 
+    return (
       <>
-      <label className='form__label labelImage' htmlFor='img'>
-              Imagen de perfil
-            </label>
-            <div className='form__wrapperImage'>
-              <div className='action get-avatar'>
-                <button className='action__upload-btn js__profile-trigger get-avatar__trigger' type='button' onClick={this.handleFilePicker}>
-                  Añadir imagen
-                </button>
-            <input type='file' name='' id='avatar' ref={this.myFileField} className='action__hiddenField js__profile-upload-btn get-avatar__upload-field' onChange={this.uploadImage} required />
-              </div>
-              <div className='profile'>
-                <img className='profile__preview js__profile-preview get-avatar__preview' src={this.getPreview(this.props.isAvatarDefault, this.props.avatar)}></img>
-              </div>
+        <label className='form__label labelImage' htmlFor='img'>
+          Imagen de perfil
+        </label>
+        <div className='form__wrapperImage'>
+          <div className='action get-avatar'>
+            <button className='action__upload-btn js__profile-trigger get-avatar__trigger' type='button' onClick={this.handleFilePicker}>
+              Añadir imagen
+            </button>
+            <input
+              type='file'
+              name=''
+              id='avatar'
+              ref={this.myFileField}
+              className='action__hiddenField js__profile-upload-btn get-avatar__upload-field'
+              onChange={this.uploadImage}
+              required
+            />
+          </div>
+          <div className='get-avatar__preview--container'>
+            <img
+              className='profile__preview js__profile-preview get-avatar__preview'
+              src={this.getPreview(this.props.isAvatarDefault, this.props.avatar)}
+            ></img>
+          </div>
         </div>
-        </>
+      </>
     );
   }
 }
