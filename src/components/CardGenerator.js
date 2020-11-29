@@ -13,19 +13,6 @@ import api from "../service/api";
 class CardGenerator extends React.Component {
   constructor() {
     super();
-    this.state = {
-      palette: 1,
-      name: '',
-      job: '',
-      phone: '',
-      email: '',
-      linkedin: '',
-      github: '',
-      photo: '',
-      apiSuccess: false,
-      apiCardUrl: '',
-      apiError: '',
-    };
 
     this.handleChange = this.handleChange.bind(this);
     this.getLocalStorage = this.getLocalStorage.bind(this);
@@ -101,6 +88,9 @@ class CardGenerator extends React.Component {
         github: '',
         isAvatarDefault: true,
         avatar: 'https://i.picasion.com/pic90/275001457e7c33cd30cbc32e7de2aabe.gif',
+        apiSuccess: false,
+        apiCardUrl: '',
+        apiError: '',
       };
     } else {
       return {
@@ -113,6 +103,9 @@ class CardGenerator extends React.Component {
         palette: localFormData.palette,
         isAvatarDefault: false,
         avatar: localFormData.avatar,
+        apiSuccess: false,
+        apiCardUrl: '',
+        apiError: '',
       };
     }
   }

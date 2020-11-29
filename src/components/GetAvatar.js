@@ -58,6 +58,7 @@ class GetAvatar extends Component {
             <img
               className='profile__preview js__profile-preview get-avatar__preview'
               src={this.getPreview(this.props.isAvatarDefault, this.props.avatar)}
+              alt='visualized'
             ></img>
           </div>
         </div>
