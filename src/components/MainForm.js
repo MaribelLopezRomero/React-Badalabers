@@ -2,6 +2,7 @@ import React from "react";
 import "../stylesheets/_mainForm.scss";
 import Include from "./Include";
 import '../stylesheets/_hidden.scss'
+import GetAvatar from './GetAvatar';
 
 class MainForm extends React.Component {
   constructor(props) {
@@ -26,7 +27,6 @@ class MainForm extends React.Component {
       });
     }
   }
-  // this.state.isHidden === false ? 'hideLineShare' : '';
   render() {
     return (
       <div>
@@ -50,7 +50,7 @@ class MainForm extends React.Component {
               name='inputForm'
               placeholder='Ej.: Maléfica'
               required
-              defaultValue={this.props.dataFromParent.name}
+              value={this.props.dataFromParent.name}
             />
             <label className='form__label' htmlFor='position'>
               Puesto
@@ -62,22 +62,9 @@ class MainForm extends React.Component {
               name='inputForm'
               placeholder='Ej.: Bruja malvada'
               required
-              defaultValue={this.props.dataFromParent.job}
+              value={this.props.dataFromParent.job}
             />
-            <label className='form__label labelImage' htmlFor='img'>
-              Imagen de perfil
-            </label>
-            <div className='form__wrapperImage'>
-              <div className='action'>
-                <button className='action__upload-btn js__profile-trigger' type='button'>
-                  Añadir imagen
-                </button>
-                <input type='file' name='' id='photo' className='action__hiddenField js__profile-upload-btn' required />
-              </div>
-              <div className='profile'>
-                <div className='profile__preview js__profile-preview'></div>
-              </div>
-            </div>
+            <GetAvatar avatar={this.props.dataFromParent.avatar} isAvatarDefault={this.props.dataFromParent.isAvatarDefault} updateAvatar={this.props.updateAvatar} />
             <label className='form__label' htmlFor='emailAddress'>
               E-mail
             </label>
@@ -88,7 +75,7 @@ class MainForm extends React.Component {
               name='inputForm'
               placeholder='Ej.: malefica@gmail.com'
               required
-              defaultValue={this.props.dataFromParent.email}
+              value={this.props.dataFromParent.email}
             />
             <label className='form__label' htmlFor='telephone'>
               Teléfono
@@ -100,7 +87,7 @@ class MainForm extends React.Component {
               name='inputForm'
               placeholder='Ej.: 666-66-66-66'
               required
-              defaultValue={this.props.dataFromParent.phone}
+              value={this.props.dataFromParent.phone}
             />
 
             <label className='form__label' htmlFor='linkedin'>
@@ -112,7 +99,7 @@ class MainForm extends React.Component {
               type='text'
               name='inputForm'
               placeholder='Ej.: linkedin.com/in/malefica'
-              defaultValue={this.props.dataFromParent.linkedin}
+              value={this.props.dataFromParent.linkedin}
             />
             <label className='form__label' htmlFor='github'>
               GitHub
@@ -123,7 +110,7 @@ class MainForm extends React.Component {
               type='text'
               name='inputForm'
               placeholder='Ej.: @malefica'
-              defaultValue={this.props.dataFromParent.github}
+              value={this.props.dataFromParent.github}
             />
           </form>
         </section>
