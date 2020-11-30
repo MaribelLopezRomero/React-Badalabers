@@ -52,28 +52,32 @@ class CardGenerator extends React.Component {
   // }
 
   updateAvatar(image) {
-    this.setState({
-      avatar: image,
-      isAvatarDefault: false,
-    });
+    this.setState(
+      {
+        avatar: image,
+        isAvatarDefault: false,
+      },
+      () => {
+        localStorage.setItem('object', JSON.stringify(this.state));
+      }
+    );
   }
 
   handleChange(event) {
+    if (event.target.id === 'avatar') {
+      return;
+    };
     const key = event.target.id;
-    let value;
     if (event.target.id === 'name') {
-      value = event.target.value.slice(0, 16);
+      event.target.value = event.target.value.slice(0, 16);
     } else if (event.target.id === 'job') {
-      value = event.target.value.slice(0, 20);
-    } else if (event.target.type === 'file') {
-      value = this.state.avatar; 
+      event.target.value = event.target.value.slice(0, 20);
     }
     this.setState(
       {
-        [key]: value,
+        [key]: event.target.value,
       },
       () => {
-        console.log(this.state);
         localStorage.setItem('object', JSON.stringify(this.state));
       }
     );

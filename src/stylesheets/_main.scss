@@ -1,12 +1,12 @@
 @import './variables';
 
 .mainProfileCards {
-  height: 100vh;
   display: flex;
   flex-direction: column;
   width: 100%;
 
   @media all and (min-width: 768px) {
+    height: 100vh;
     display: flex;
     flex-direction: row-reverse;
     background: linear-gradient(to bottom, $colorBg, $colorWhite 9%);
